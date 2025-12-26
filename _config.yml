@@ -5,11 +5,11 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-# Site Settings
-title                    : "Lorem ipsum"
-description              : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. "
-repository               : "RayeRen/acad-homepage.github.io"
-google_scholar_stats_use_cdn : true
+# Site Settings (update these for your profile)
+title                    : "Shumao Wang (王树茂)"
+description              : "111"
+repository               : "WangShumao/wangshumao.github.io" # GitHub repo in the form USER/REPO
+google_scholar_stats_use_cdn : false # use jsdelivr for google scholar stats
 
 # google analytics
 google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
@@ -19,18 +19,18 @@ google_site_verification :  # get google_site_verification from https://search.g
 bing_site_verification   :  # get bing_site_verification from https://www.bing.com/webmasters/about
 baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.baidu.com/login/index?u=/site/index
 
-# Site Author
+# Site Author (shown in sidebar/profile)
 author:
-  name             : "Lorem ipsum"
-  avatar           : "images/android-chrome-512x512.png"
-  bio              : "Lorem ipsum College"
-  location         : "Beijing, China"
-  employer         :
+  name             : "Shumao Wang (王树茂)" # full name
+  avatar           : "images/android-chrome-512x512.png" # path to avatar image
+  bio              : "B.S. in Computer Science, Xi'an University of Architecture and Technology" # short bio / affiliation
+  location         : "Chengdu, China"
+  employer         : # optional
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
-  email            : "Lorem@ipsum.com"
+  email            : "MsEEicoding@gmail.com"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
-  uri              :
+  uri              : # personal website URL
   bitbucket        :
   codepen          :
   dribbble         :

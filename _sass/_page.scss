@@ -2,6 +2,7 @@
    SINGLE PAGE/POST
    ========================================================================== */
 
+// Main page container and max width for large screens.
 #main {
   @include container;
   @include clearfix;
@@ -16,15 +17,24 @@
   }
 }
 
+// Layout container for the page content column.
 .page {
   @include breakpoint($large) {
-    @include span(10 of 12 last);
-    @include prefix(0.5 of 12);
-    @include suffix(0 of 12);
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 
+  // Inner wrapper that centers and constrains the content width.
   .page__inner-wrap {
-    @include full();
+    // @include full();
+    display: block;  
+    float: none;      
+    clear: both;
+    max-width: 740px;
+    margin-left: auto;
+    margin-right: auto;
 
     .page__content,
     .page__meta,
@@ -48,7 +58,18 @@
   font-size: $type-size-4;
 }
 
+// Typography and content flow for the main article body.
 .page__content {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+
+  h1, h2, h3, h4, h5, h6,
+  p, ul, ol, li, dl, dt, dd {
+    text-align: left;
+  }
+
   #about-me{
     margin-top: -10em;
       &:before { 
@@ -118,6 +139,7 @@
   }
 }
 
+// Hero banner styles (image/overlay variant).
 .page__hero {
   position: relative;
   margin-bottom: 2em;
@@ -206,6 +228,7 @@
    Social sharing
    ========================================================================== */
 
+// Social share block below the article content.
 .page__share {
   margin-top: 2em;
   padding-top: 1em;
@@ -236,6 +259,7 @@
    Page meta
    ========================================================================== */
 
+// Meta information (dates, taxonomy, etc.) styling.
 .page__meta {
   margin-top: 2em;
   color: mix(#fff, $gray, 25%);
@@ -388,6 +412,7 @@
    Related
    ========================================================================== */
 
+// Related content section styling.
 .page__related {
   margin-top: 2em;
   padding-top: 1em;

@@ -7,14 +7,17 @@
    ========================================================================== */
 
 .sidebar {
-  -webkit-transform: translate3d(0, 0 , 0);
-          transform: translate3d(0, 0 , 0);
 
   @include clearfix();
   margin-bottom: 1em;
 
   @include breakpoint($large) {
     @include span(2 of 12);
+    float: none;
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out;
             transition: opacity 0.2s ease-in-out;
@@ -70,11 +73,12 @@
    ========================================================================== */
 .profile_box{
   @include breakpoint($large) {
-    display: block;
+    display: flex;
   }
   display: flex;
-  justify-content: flex-start;
-  align-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   align-items: center;
 }
 
@@ -116,6 +120,7 @@
     width: 100%;
     padding-left: 0;
     padding-right: 0;
+    text-align: center;
   }
 }
 
@@ -163,6 +168,8 @@
 
   @include breakpoint($large) {
     display: block;
+    margin-left: 0;
+    text-align: center;
   }
 
   button {
@@ -234,7 +241,17 @@
   }
 
   li {
-    white-space: nowrap;
+    white-space: normal;
+    display: block;
+    margin: 0 0 6px 0;
+  }
+
+  .site-description {
+    display: block;
+    width: 100%;
+    margin: 0 0 1em 0;
+    white-space: normal;
+    text-align: center;
   }
 
   a {
