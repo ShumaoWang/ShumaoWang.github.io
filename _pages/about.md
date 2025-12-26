@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hello! I am Shumao Wang (王树茂), based in Chengdu, China. I earned a B.S. in Computer Science from Xi'an University of Architecture and Technology. This site introduces my background, interests, and updates.
+Hello! I am Shumao Wang (Wang Shumao), based in Chengdu, China. I earned a B.S. in Computer Science from Xi'an University of Architecture and Technology. This site introduces my background, interests, and updates.
 
 # News
 - Coming soon.
@@ -38,7 +38,7 @@ Hello! I am Shumao Wang (王树茂), based in Chengdu, China. I earned a B.S. in
 - Coming soon.
 
 # Deep Dive into Machine Learning
-- Learning notes and reflections:
+- A dedicated page with organized notes and takeaways: [Deep Dive into Machine Learning](/deep-dive/)
 
 # Contact
 - Email: <a href="mailto:mseeicoding@gmail.com">mseeicoding@gmail.com</a>
