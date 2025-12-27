@@ -65,8 +65,8 @@
 .mobile-home-button {
   display: none;
   position: fixed;
-  left: -0.75rem;
-  bottom: 1rem;
+  right: 1rem;
+  bottom: 4.25rem;
   z-index: 45;
   width: 44px;
   height: 44px;
@@ -78,16 +78,10 @@
   text-decoration: none;
   align-items: center;
   justify-content: center;
-  transition: left 0.2s ease;
 
   @include breakpoint(max-width $medium) {
     display: inline-flex;
   }
-}
-
-.mobile-home-button:focus,
-.mobile-home-button:active {
-  left: 1rem;
 }
 
 

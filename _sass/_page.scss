@@ -555,7 +555,7 @@
 
 .toc-toggle__button {
   position: fixed;
-  right: -0.75rem;
+  right: 1rem;
   bottom: 1rem;
   z-index: 40;
   width: 44px;
@@ -570,7 +570,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: right 0.2s ease;
 }
 
 .toc-backdrop {
@@ -607,10 +606,6 @@
 
 .toc-toggle:checked ~ .toc-backdrop {
   display: block;
-}
-
-.toc-toggle:checked + .toc-toggle__button {
-  right: 1rem;
 }
 
 .toc-toggle:checked ~ .toc-drawer {
