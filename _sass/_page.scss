@@ -570,17 +570,21 @@
 .toc-backdrop {
   display: none;
   position: fixed;
-  inset: 0;
+  top: 3.5rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 30;
   background: rgba(#000, 0.35);
 }
 
 .toc-drawer {
   position: fixed;
-  top: 0;
+  top: 3.5rem;
   right: 0;
-  height: 100vh;
-  width: min(80vw, 320px);
+  bottom: 0;
+  width: 80%;
+  max-width: 320px;
   z-index: 35;
   background: #fff;
   border-left: 1px solid $border-color;
