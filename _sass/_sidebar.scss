@@ -95,6 +95,12 @@
     height: auto;
   }
 
+  @include breakpoint(max-width $large) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   img {
     max-width: 175px;
     min-width: 75px;
@@ -120,6 +126,11 @@
     width: 100%;
     padding-left: 0;
     padding-right: 0;
+    text-align: center;
+  }
+
+  @include breakpoint(max-width $large) {
+    padding-left: 0;
     text-align: center;
   }
 }
@@ -168,6 +179,11 @@
 
   @include breakpoint($large) {
     display: block;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  @include breakpoint(max-width $large) {
     margin-left: 0;
     text-align: center;
   }
@@ -274,6 +290,7 @@
   padding: .25em;
   font-size: 1.75em;
   display: block;
+  text-align: center;
   a {
     color: inherit;
     text-decoration: none;
