@@ -13,6 +13,13 @@
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
   </div>
 
+  {% if site.description or author.location %}
+  <div class="author__meta-mobile">
+    {% if site.description %}<p class="author__meta-line">{{ site.description }}</p>{% endif %}
+    {% if author.location %}<p class="author__meta-line"><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.location }}</p>{% endif %}
+  </div>
+  {% endif %}
+
   <div class="author__urls-wrapper">
     <!-- <button class="btn btn--inverse">More Info & Contact</button> -->
     <ul class="author__urls social-icons">

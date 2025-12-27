@@ -161,6 +161,22 @@
   }
 }
 
+.author__meta-mobile {
+  display: block;
+  text-align: center;
+  margin: 0.5rem 0 0.75rem 0;
+
+  @include breakpoint($large) {
+    display: none;
+  }
+}
+
+.author__meta-line {
+  margin: 0.25rem 0;
+  font-size: $type-size-6;
+  color: $gray;
+}
+
 .author__urls-wrapper {
   position: relative;
   display: table-cell;
