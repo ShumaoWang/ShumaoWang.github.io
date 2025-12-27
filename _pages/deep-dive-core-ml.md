@@ -9,7 +9,7 @@ author_profile: false
 
 <div class="toc-mobile">
   <input class="toc-toggle" type="checkbox" id="toc-toggle">
-  <label class="toc-toggle__button" for="toc-toggle">Contents</label>
+  <label class="toc-toggle__button" for="toc-toggle"><i class="fas fa-list" aria-hidden="true"></i><span class="sr-only">Contents</span></label>
   <label class="toc-backdrop" for="toc-toggle"></label>
   <div class="toc-drawer" role="dialog" aria-labelledby="toc-mobile-title">
     <div class="toc-drawer__inner">
