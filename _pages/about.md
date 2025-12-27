@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hello! I am Shumao Wang (Wang Shumao), based in Chengdu, China. I earned a B.S. in Computer Science from Xi'an University of Architecture and Technology. This site introduces my background, interests, and updates.
+Hello! I am Shumao Wang (Wang Shumao), based in Chengdu, China. I am a senior undergraduate student in Computer Science at Xi'an University of Architecture and Technology. This site introduces my background, interests, and updates.
 
 # News
 - Coming soon.
@@ -29,7 +29,7 @@ Hello! I am Shumao Wang (Wang Shumao), based in Chengdu, China. I earned a B.S. 
 - Coming soon.
 
 # Education
-- B.S. in Computer Science, Xi'an University of Architecture and Technology
+- B.S. in Computer Science, Xi'an University of Architecture and Technology (in progress)
 
 # Invited Talks
 - Coming soon.

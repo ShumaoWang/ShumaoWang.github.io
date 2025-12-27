@@ -21,7 +21,7 @@ This page collects my learning notes and reflections on machine learning. I will
     </div>
     <div class="topic-card__body">
       <h3 class="topic-card__title">
-        <a href="{{ '/deep-dive/core-ml/' | relative_url }}">Core ML Concepts and Math Foundations</a>
+        <a href="{{ '/deep-dive/core-ml/' | relative_url }}" target="_self">Core ML Concepts and Math Foundations</a>
       </h3>
       <p class="topic-card__meta">Key ideas, proofs, and intuition notes for the ML fundamentals I am studying.</p>
     </div>
@@ -32,7 +32,7 @@ This page collects my learning notes and reflections on machine learning. I will
     </div>
     <div class="topic-card__body">
       <h3 class="topic-card__title">
-        <a href="{{ '/deep-dive/dl-tricks/' | relative_url }}">Deep Learning Models and Training Tricks</a>
+        <a href="{{ '/deep-dive/dl-tricks/' | relative_url }}" target="_self">Deep Learning Models and Training Tricks</a>
       </h3>
       <p class="topic-card__meta">Model summaries, training recipes, and practical takeaways from experiments.</p>
     </div>
@@ -43,7 +43,7 @@ This page collects my learning notes and reflections on machine learning. I will
     </div>
     <div class="topic-card__body">
       <h3 class="topic-card__title">
-        <a href="{{ '/deep-dive/reading-notes/' | relative_url }}">Reading Notes and Paper Summaries</a>
+        <a href="{{ '/deep-dive/reading-notes/' | relative_url }}" target="_self">Reading Notes and Paper Summaries</a>
       </h3>
       <p class="topic-card__meta">Short summaries and insights from papers I read.</p>
     </div>
