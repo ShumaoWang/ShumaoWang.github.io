@@ -512,22 +512,32 @@
 // Two-column article layout with a right-side TOC.
 .article-layout {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 1.5rem;
-  align-items: flex-start;
+  align-items: stretch;
+
+  @include breakpoint($large) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
 
 .article-main {
   flex: 1 1 auto;
   min-width: 0;
+  width: 100%;
 }
 
 .article-toc {
-  flex: 0 0 240px;
-  margin-left: auto;
+  display: none;
 
-  position: sticky;
-  top: 6em;
+  @include breakpoint($large) {
+    display: block;
+    flex: 0 0 240px;
+    margin-left: auto;
+    position: sticky;
+    top: 6em;
+  }
 }
 
 .toc-panel {
