@@ -1,23 +1,29 @@
 ---
 permalink: /deep-dive/dl-ch1/
-title: "Deep Learning Chapter 1 Reading Notes"
+title: "Chapter 1: 深度学习的历史趋势"
 excerpt: ""
 author_profile: false
 ---
 
-# Deep Learning Chapter 1 Reading Notes
+# Chapter 1: 深度学习的历史趋势
 
-通过升维方法可以构造一个多项式函数来解决线性函数无法表示异或($XOR$)的问题，函数如下：
+[Back to Deep Learning Reading Notes](/deep-dive/dl-reading-notes/)
+
+本节来自《Deep Learning》一书的第 1 章笔记。
+
+我通过升维的方式构造了一个多项式函数来处理 XOR 问题，函数如下：
 
 $$
-4\left(\frac{\sqrt{2}}{2}x+\frac{\sqrt{2}}{2}y-\frac{\sqrt{2}}{2}\right)^{2}+2\left(-\frac{\sqrt{2}}{2}x+\frac{\sqrt{2}}{2}y\right)^{2}-1=z
+z = 4\Bigl(\frac{\sqrt{2}}{2}x+\frac{\sqrt{2}}{2}y-\frac{\sqrt{2}}{2}\Bigr)^{2}
+  + 2\Bigl(-\frac{\sqrt{2}}{2}x+\frac{\sqrt{2}}{2}y\Bigr)^{2}
+  - 1
 $$
 
-下面是 3D 曲面图：
+下面是 3D 曲面图（可拖动旋转/缩放）：
 
 <div id="xor-polynomial-plot" style="width: 100%; height: 420px;"></div>
 
-<script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+<script src="{{ '/assets/vendor/plotly/plotly-2.26.0.min.js' | relative_url }}"></script>
 <script>
   (function () {
     function renderPlot() {
@@ -47,25 +53,23 @@ $$
         z.push(row);
       }
       var onSurface = [
-        { x: 0, y: 1, label: "(0,1) on surface" },
-        { x: 1, y: 0, label: "(1,0) on surface" }
+        { x: 0, y: 1 },
+        { x: 1, y: 0 }
       ];
       var belowSurface = [
-        { x: 0, y: 0, label: "(0,0) below surface" },
-        { x: 1, y: 1, label: "(1,1) below surface" }
+        { x: 0, y: 0 },
+        { x: 1, y: 1 }
       ];
       function buildPoints(points, useSurfaceZ) {
         var px = [];
         var py = [];
         var pz = [];
-        var ptext = [];
         for (var pi = 0; pi < points.length; pi++) {
           px.push(points[pi].x);
           py.push(points[pi].y);
           pz.push(useSurfaceZ ? f(points[pi].x, points[pi].y) : 0);
-          ptext.push(points[pi].label);
         }
-        return { x: px, y: py, z: pz, text: ptext };
+        return { x: px, y: py, z: pz };
       }
       var onData = buildPoints(onSurface, true);
       var belowData = buildPoints(belowSurface, false);
@@ -89,12 +93,10 @@ $$
         },
         {
           type: "scatter3d",
-          mode: "markers+text",
+          mode: "markers",
           x: onData.x,
           y: onData.y,
           z: onData.z,
-          text: onData.text,
-          textposition: "top center",
           name: "On surface",
           marker: {
             size: 3,
@@ -103,16 +105,14 @@ $$
         },
         {
           type: "scatter3d",
-          mode: "markers+text",
+          mode: "markers",
           x: belowData.x,
           y: belowData.y,
           z: belowData.z,
-          text: belowData.text,
-          textposition: "top center",
           name: "Below surface",
           marker: {
             size: 3,
-            color: "#2b6cb0"
+            color: "#2f855a"
           }
         }
       ];

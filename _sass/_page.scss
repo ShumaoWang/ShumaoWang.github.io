@@ -469,6 +469,17 @@
   }
 }
 
+.topic-card__media--plot {
+  display: flex;
+  align-items: stretch;
+  min-height: 220px;
+}
+
+.topic-card__plot {
+  width: 100%;
+  height: 100%;
+}
+
 .topic-card__body {
   padding: 1.25rem 1.5rem;
 }
