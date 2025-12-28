@@ -48,4 +48,15 @@ This page collects my learning notes and reflections on machine learning. I will
       <p class="topic-card__meta">Short summaries and insights from papers I read.</p>
     </div>
   </article>
+  <article class="topic-card">
+    <div class="topic-card__media">
+      <img src="{{ '/images/500x300.png' | relative_url }}" alt="Topic placeholder">
+    </div>
+    <div class="topic-card__body">
+      <h3 class="topic-card__title">
+        <a href="{{ '/deep-dive/dl-ch1/' | relative_url }}" target="_self">Deep Learning Chapter 1 Reading Notes</a>
+      </h3>
+      <p class="topic-card__meta">Notes on XOR, polynomial surfaces, and first principles from Chapter 1.</p>
+    </div>
+  </article>
 </div>
