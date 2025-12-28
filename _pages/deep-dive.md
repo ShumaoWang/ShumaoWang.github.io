@@ -13,30 +13,8 @@ This page collects my learning notes and reflections on machine learning. I will
 - [AcWing](https://www.acwing.com/user/myspace/record/407567/)
 - [Cnblogs](https://www.cnblogs.com/MsEEicoding)
 
-# Topics (Coming Soon)
+# Topics
 <div class="topic-cards">
-  <article class="topic-card">
-    <div class="topic-card__media">
-      <img src="{{ '/images/500x300.png' | relative_url }}" alt="Topic placeholder">
-    </div>
-    <div class="topic-card__body">
-      <h3 class="topic-card__title">
-        <a href="{{ '/deep-dive/core-ml/' | relative_url }}" target="_self">Core ML Concepts and Math Foundations</a>
-      </h3>
-      <p class="topic-card__meta">Key ideas, proofs, and intuition notes for the ML fundamentals I am studying.</p>
-    </div>
-  </article>
-  <article class="topic-card">
-    <div class="topic-card__media">
-      <img src="{{ '/images/500x300.png' | relative_url }}" alt="Topic placeholder">
-    </div>
-    <div class="topic-card__body">
-      <h3 class="topic-card__title">
-        <a href="{{ '/deep-dive/dl-tricks/' | relative_url }}" target="_self">Deep Learning Models and Training Tricks</a>
-      </h3>
-      <p class="topic-card__meta">Model summaries, training recipes, and practical takeaways from experiments.</p>
-    </div>
-  </article>
   <article class="topic-card">
     <div class="topic-card__media">
       <img src="{{ '/images/487a3f84-ffff-40cc-beae-edba1e002a43.jpg' | relative_url }}" alt="Deep learning notes">
