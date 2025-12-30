@@ -26,4 +26,15 @@ This page collects my learning notes and reflections on machine learning. I will
       <p class="topic-card__meta">Notes and experiments from the book Deep Learning.</p>
     </div>
   </article>
+  <article class="topic-card">
+    <div class="topic-card__media">
+      <img src="{{ '/images/Gemini_Generated_Image_99lxxk99lxxk99lx.png' | relative_url }}" alt="Machine Learning Specialization notes" style="width: 100%; height: 220px; object-fit: cover;">
+    </div>
+    <div class="topic-card__body">
+      <h3 class="topic-card__title">
+        <a href="{{ '/deep-dive/ml-specialization/' | relative_url }}" target="_self">Machine Learning Specialization by Andrew Ng - Study Notes</a>
+      </h3>
+      <p class="topic-card__meta">Study notes and exercises from the Machine Learning Specialization.</p>
+    </div>
+  </article>
 </div>
