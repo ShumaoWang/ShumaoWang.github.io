@@ -7,7 +7,7 @@
 
 # Site Settings (update these for your profile)
 title                    : "Shumao Wang (王树茂)"
-description              : "那就享受知识本身, just enjoy it"
+description              : "享受知识本身"
 repository               : "WangShumao/wangshumao.github.io" # GitHub repo in the form USER/REPO
 google_scholar_stats_use_cdn : false # use jsdelivr for google scholar stats
 
