@@ -19,6 +19,13 @@
   });
 </script>
 <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": { linebreaks: { automatic: false } },
+    "CommonHTML": { linebreaks: { automatic: false } },
+    "SVG": { linebreaks: { automatic: false } }
+  });
+</script>
+<script type="text/x-mathjax-config">
   MathJax.Hub.Register.StartupHook("End", function () {
     function wrapDisplays() {
       var displays = document.querySelectorAll(".MathJax_Display");

@@ -144,10 +144,22 @@
 .MathJax_Display {
   display: block;
   max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.MathJax_Display > span,
+.MathJax_Display > span > span {
+  display: inline-block;
+  max-width: none;
+  white-space: nowrap;
 }
 
 .MathJax {
-  max-width: 100%;
+  max-width: none;
 }
 
 .math-scroll {
@@ -193,10 +205,21 @@
 }
 
 mjx-container[display="true"] {
+  display: block;
   overflow-x: auto;
   overflow-y: hidden;
   max-width: 100%;
   box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  text-align: left;
+}
+
+mjx-container[display="true"] > span,
+mjx-container[display="true"] > mjx-math {
+  display: inline-block;
+  max-width: none;
+  white-space: nowrap;
 }
 
 // Hero banner styles (image/overlay variant).
