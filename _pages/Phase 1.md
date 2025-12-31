@@ -160,6 +160,16 @@ author_profile: false
     
     $$\theta = (X^T X)^{-1} X^T y \tag{19}$$
 
+关于$X^TX$不可逆的情况
+
+从计算复杂度的角度, 谈谈为什么大样本时我们使用梯度下降方法求解极小值点, 而不使用能直接求出极小值的正规方程方法
+
+
+
+## rescaling 是一个很妙的优化方法
+
+由于
+
 </div>
 
   <aside class="article-toc">
