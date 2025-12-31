@@ -147,18 +147,18 @@ author_profile: false
         其中:
 
         $$X = \begin{bmatrix} \mathbf{x}^{(1)} \\ \vdots  \\ \mathbf{x}^{(m)} \end{bmatrix}
-        = \underbrace{\begin{bmatrix} 1 & x_1^{(1)} & x_2^{(1)} & \cdots & x_n^{(1)} \\ 1 & x_1^{(2)} & x_2^{(2)} & \cdots & x_n^{(2)} \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 1 & x_1^{(m)} & x_2^{(m)} & \cdots & x_n^{(m)} \end{bmatrix}}_{m \times (n+1)} \quad$$
-        $$\theta = \underbrace{\begin{bmatrix} b \\ w_1 \\ w_2 \\ \vdots \\ w_n \end{bmatrix}}_{(n+1) \times 1} \tag{15}$$
+        = \underbrace{\begin{bmatrix} 1 & x_1^{(1)} & x_2^{(1)} & \cdots & x_n^{(1)} \\ 1 & x_1^{(2)} & x_2^{(2)} & \cdots & x_n^{(2)} \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 1 & x_1^{(m)} & x_2^{(m)} & \cdots & x_n^{(m)} \end{bmatrix}}_{m \times (n+1)} \quad\tag{15}$$
+        $$\theta = \underbrace{\begin{bmatrix} b \\ w_1 \\ w_2 \\ \vdots \\ w_n \end{bmatrix}}_{(n+1) \times 1} \tag{16}$$
 
         同理得:
 
-        $$X^T (X\theta - y) = 0 \tag{16}$$
+        $$X^T (X\theta - y) = 0 \tag{17}$$
 
-        $$\theta = (X^T X)^{-1} X^T y \tag{17}$$
+        $$\theta = (X^T X)^{-1} X^T y \tag{18}$$
 
     综上, 对于任意一种情况都有正规方程的形式永远不变。使得成本函数$J({\mathbf{w},b};\mathbf{X},\mathbf{y})$取得最小值的点为: 
     
-    $$\theta = (X^T X)^{-1} X^T y \tag{18}$$
+    $$\theta = (X^T X)^{-1} X^T y \tag{19}$$
 
 </div>
 
