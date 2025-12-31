@@ -447,6 +447,7 @@
     box-sizing: border-box;
     -webkit-overflow-scrolling: touch;
     text-align: left;
+    padding-bottom: 0.25rem;
   }
 
   .math-scroll .MathJax_Display {
@@ -457,6 +458,20 @@
     width: max-content;
     width: -moz-max-content;
     white-space: nowrap;
+  }
+
+  .math-scroll--overflow {
+    position: relative;
+  }
+
+  .math-scroll--overflow::after {
+    content: "↔";
+    position: absolute;
+    right: 0.25rem;
+    bottom: 0;
+    font-size: 0.8rem;
+    color: mix(#000, $gray, 45%);
+    pointer-events: none;
   }
 
   .math-scroll .MathJax_Display > span,

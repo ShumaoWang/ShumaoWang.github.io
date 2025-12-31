@@ -20,16 +20,32 @@
 </script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Register.StartupHook("End", function () {
-    var displays = document.querySelectorAll(".MathJax_Display");
-    displays.forEach(function (display) {
-      if (display.parentElement && display.parentElement.classList.contains("math-scroll")) {
-        return;
-      }
-      var wrapper = document.createElement("div");
-      wrapper.className = "math-scroll";
-      display.parentNode.insertBefore(wrapper, display);
-      wrapper.appendChild(display);
-    });
+    function wrapDisplays() {
+      var displays = document.querySelectorAll(".MathJax_Display");
+      displays.forEach(function (display) {
+        if (display.parentElement && display.parentElement.classList.contains("math-scroll")) {
+          return;
+        }
+        var wrapper = document.createElement("div");
+        wrapper.className = "math-scroll";
+        display.parentNode.insertBefore(wrapper, display);
+        wrapper.appendChild(display);
+      });
+    }
+
+    function markOverflow() {
+      var wrappers = document.querySelectorAll(".math-scroll");
+      wrappers.forEach(function (wrapper) {
+        wrapper.classList.remove("math-scroll--overflow");
+        if (wrapper.scrollWidth > wrapper.clientWidth + 1) {
+          wrapper.classList.add("math-scroll--overflow");
+        }
+      });
+    }
+
+    wrapDisplays();
+    markOverflow();
+    window.addEventListener("resize", markOverflow);
   });
 </script>
 <script src="{{ '/assets/vendor/mathjax/MathJax.js' | relative_url }}?config=TeX-MML-AM_CHTML" async></script>
