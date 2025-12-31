@@ -149,7 +149,6 @@
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-x: contain;
-  touch-action: pan-x;
   white-space: nowrap;
   text-align: left;
 }
@@ -163,7 +162,10 @@
   white-space: nowrap;
 }
 
-.MJXc-display > span {
+.MJXc-display > span,
+.MJXc-display > mjx-chtml,
+.MJXc-display > .MathJax_CHTML {
+  display: inline-block;
   width: -moz-max-content;
   width: max-content;
 }
@@ -181,7 +183,6 @@
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-x: contain;
   text-align: left;
-  touch-action: pan-x;
   padding-bottom: 0.25rem;
   position: relative;
 }
@@ -225,7 +226,6 @@ mjx-container[display="true"] {
   box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-x: contain;
-  touch-action: pan-x;
   white-space: nowrap;
   text-align: left;
 }

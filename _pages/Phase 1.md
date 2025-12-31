@@ -113,52 +113,52 @@ author_profile: false
 
         $$X = \begin{bmatrix} 1 & x^{(1)} \\ \vdots & \vdots \\ 1 & x^{(m)} \end{bmatrix}, \quad
         \theta = \begin{bmatrix} b \\ w \end{bmatrix}, \quad
-        \mathbf{x}^{(i)} = \begin{bmatrix} 1 & x^{(i)} \end{bmatrix}$$
+        \mathbf{x}^{(i)} = \begin{bmatrix} 1 & x^{(i)} \end{bmatrix} \tag{7}$$
 
-        $$J = \frac{1}{2m} \sum (\mathbf{x}_{1\times 2}^{(i)}\theta_{2\times 1} - y^{(i)})^2 \tag{7}$$
+        $$J = \frac{1}{2m} \sum (\mathbf{x}_{1\times 2}^{(i)}\theta_{2\times 1} - y^{(i)})^2 \tag{8}$$
 
-        $$\frac{\partial J}{\partial \theta} = \frac{1}{m} \sum (\mathbf{x}^{(i)}\theta - y^{(i)}) (\mathbf{x}^{(i)})^T = 0 \tag{8}$$
+        $$\frac{\partial J}{\partial \theta} = \frac{1}{m} \sum (\mathbf{x}^{(i)}\theta - y^{(i)}) (\mathbf{x}^{(i)})^T = 0 \tag{9}$$
     
         将样本 $\mathbf{x}^{(i)}$ 按行拼接为 $X$，从而去掉 $\sum$ 符号：
 
         $$X = \begin{bmatrix} \mathbf{x}^{(1)} \\ \vdots  \\ \mathbf{x}^{(m)} \end{bmatrix}
-        = \begin{bmatrix} 1 & x^{(1)} \\ \vdots & \vdots \\ 1 & x^{(m)} \end{bmatrix}$$
+        = \begin{bmatrix} 1 & x^{(1)} \\ \vdots & \vdots \\ 1 & x^{(m)} \end{bmatrix} \tag{10}$$
 
-        $$X^T (X\theta - y) = 0 \tag{9}$$
+        $$X^T (X\theta - y) = 0 \tag{11}$$
 
-        $$X^T X \theta = X^T y \tag{10}$$
+        $$X^T X \theta = X^T y \tag{12}$$
 
-        $$\theta = (X^T X)^{-1} X^T y \tag{11}$$
+        $$\theta = (X^T X)^{-1} X^T y \tag{13}$$
 
         即：
 
-        $$\begin{bmatrix} b \\ w \end{bmatrix} = (X^T X)^{-1} X^T y \tag{12}$$
+        $$\begin{bmatrix} b \\ w \end{bmatrix} = (X^T X)^{-1} X^T y \tag{14}$$
 
         **为什么可以将 $\begin{cases} \frac{\partial J}{\partial w} = 0 \\ \frac{\partial J}{\partial b} = 0 \end{cases}$ 转化为 $\frac{\partial J}{\partial \theta} = 0$ ?**
 
-        $$\frac{\partial J}{\partial \theta} = 0 \iff \begin{bmatrix} \frac{\partial J}{\partial b} \\ \frac{\partial J}{\partial w} \end{bmatrix} = \mathbf{0} \iff \vec{grad} \ J = \mathbf{0} \quad \tag{13}$$
+        $$\frac{\partial J}{\partial \theta} = 0 \iff \begin{bmatrix} \frac{\partial J}{\partial b} \\ \frac{\partial J}{\partial w} \end{bmatrix} = \mathbf{0} \iff \vec{grad} \ J = \mathbf{0} \quad \tag{15}$$
 
     + 推广到多元线性回归，样本特征维度为 $n$
 
         **③ $n>1$**
 
-        $$J = \frac{1}{2m} \sum (\mathbf{x}^{(i)}\theta - y^{(i)})^2 \tag{14}$$
+        $$J = \frac{1}{2m} \sum (\mathbf{x}^{(i)}\theta - y^{(i)})^2 \tag{16}$$
 
         其中:
 
         $$X = \begin{bmatrix} \mathbf{x}^{(1)} \\ \vdots  \\ \mathbf{x}^{(m)} \end{bmatrix}
-        = \underbrace{\begin{bmatrix} 1 & x_1^{(1)} & x_2^{(1)} & \cdots & x_n^{(1)} \\ 1 & x_1^{(2)} & x_2^{(2)} & \cdots & x_n^{(2)} \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 1 & x_1^{(m)} & x_2^{(m)} & \cdots & x_n^{(m)} \end{bmatrix}}_{m \times (n+1)} \quad\tag{15}$$
-        $$\theta = \underbrace{\begin{bmatrix} b \\ w_1 \\ w_2 \\ \vdots \\ w_n \end{bmatrix}}_{(n+1) \times 1} \tag{16}$$
+        = \underbrace{\begin{bmatrix} 1 & x_1^{(1)} & x_2^{(1)} & \cdots & x_n^{(1)} \\ 1 & x_1^{(2)} & x_2^{(2)} & \cdots & x_n^{(2)} \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 1 & x_1^{(m)} & x_2^{(m)} & \cdots & x_n^{(m)} \end{bmatrix}}_{m \times (n+1)} \quad\tag{17}$$
+        $$\theta = \underbrace{\begin{bmatrix} b \\ w_1 \\ w_2 \\ \vdots \\ w_n \end{bmatrix}}_{(n+1) \times 1} \tag{18}$$
 
         同理得:
 
-        $$X^T (X\theta - y) = 0 \tag{17}$$
+        $$X^T (X\theta - y) = 0 \tag{19}$$
 
-        $$\theta = (X^T X)^{-1} X^T y \tag{18}$$
+        $$\theta = (X^T X)^{-1} X^T y \tag{20}$$
 
     综上, 对于任意一种情况都有正规方程的形式永远不变。使得成本函数$J({\mathbf{w},b};\mathbf{X},\mathbf{y})$取得最小值的点为: 
     
-    $$\theta = (X^T X)^{-1} X^T y \tag{19}$$
+    $$\theta = (X^T X)^{-1} X^T y \tag{21}$$
 
 关于$X^TX$不可逆的情况
 

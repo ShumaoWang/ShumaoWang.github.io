@@ -28,7 +28,7 @@
 <script type="text/x-mathjax-config">
   MathJax.Hub.Register.StartupHook("End", function () {
     function wrapDisplays() {
-      var displays = document.querySelectorAll(".MathJax_Display");
+      var displays = document.querySelectorAll(".MathJax_Display, .MJXc-display");
       displays.forEach(function (display) {
         if (display.parentElement && display.parentElement.classList.contains("math-scroll")) {
           return;
