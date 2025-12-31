@@ -432,12 +432,24 @@
 
   // Allow long MathJax equations to scroll on small screens.
   .MathJax_Display {
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
     max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .MathJax_Display > span {
+    display: inline-block;
+    max-width: none;
   }
 
   .MathJax {
+    max-width: 100%;
+  }
+
+  mjx-container[display="true"] {
+    overflow-x: auto;
+    overflow-y: hidden;
     max-width: 100%;
   }
 }
