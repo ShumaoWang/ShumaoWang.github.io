@@ -433,26 +433,33 @@
   // Allow long MathJax equations to scroll on small screens.
   .MathJax_Display {
     display: block;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
     max-width: 100%;
-    box-sizing: border-box;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .MathJax_Display > span,
-  .MathJax_Display > span > span {
-    display: inline-block;
-    max-width: none;
-  }
-
-  .MathJax_Display .MathJax {
-    width: auto !important;
-    max-width: none;
   }
 
   .MathJax {
     max-width: 100%;
+  }
+
+  .math-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+    text-align: left;
+  }
+
+  .math-scroll .MathJax_Display {
+    display: inline-block !important;
+    overflow: visible !important;
+    margin: 0;
+    max-width: none !important;
+  }
+
+  .math-scroll .MathJax_Display > span,
+  .math-scroll .MathJax_Display > span > span {
+    display: inline-block;
+    max-width: none;
   }
 
   mjx-container[display="true"] {

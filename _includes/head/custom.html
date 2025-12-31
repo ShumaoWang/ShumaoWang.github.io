@@ -18,6 +18,20 @@
     }
   });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Register.StartupHook("End", function () {
+    var displays = document.querySelectorAll(".MathJax_Display");
+    displays.forEach(function (display) {
+      if (display.parentElement && display.parentElement.classList.contains("math-scroll")) {
+        return;
+      }
+      var wrapper = document.createElement("div");
+      wrapper.className = "math-scroll";
+      display.parentNode.insertBefore(wrapper, display);
+      wrapper.appendChild(display);
+    });
+  });
+</script>
 <script src="{{ '/assets/vendor/mathjax/MathJax.js' | relative_url }}?config=TeX-MML-AM_CHTML" async></script>
 
 <!-- end custom head snippets -->
