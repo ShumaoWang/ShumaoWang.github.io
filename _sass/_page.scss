@@ -454,6 +454,9 @@
     overflow: visible !important;
     margin: 0;
     max-width: none !important;
+    width: max-content;
+    width: -moz-max-content;
+    white-space: nowrap;
   }
 
   .math-scroll .MathJax_Display > span,
