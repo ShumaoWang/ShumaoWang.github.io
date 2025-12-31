@@ -163,6 +163,11 @@
   white-space: nowrap;
 }
 
+.MJXc-display > span {
+  width: -moz-max-content;
+  width: max-content;
+}
+
 .MathJax {
   max-width: none;
 }

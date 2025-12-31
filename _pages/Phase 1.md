@@ -177,6 +177,8 @@ author_profile: false
 - $x_1$（范围 $0 \sim 1000$）：由它决定的参数 $\theta_1$ 对代价函数极其敏感，梯度的数值非常大。
 - $x_2$（范围 $0 \sim 1$）：由它决定的参数 $\theta_2$ 对代价函数很不敏感，梯度的数值非常小。
 
+![Gemini_Generated_Image_og3r8zog3r8zog3r](https://typora-mseei.oss-cn-chengdu.aliyuncs.com/Gemini_Generated_Image_og3r8zog3r8zog3r.png)
+
 此时，我们在选择全局统一的学习率 $\alpha$ 时会陷入困境：
 
 1. 若迁就 $x_1$（选小的 $\alpha$）：
@@ -197,6 +199,8 @@ author_profile: false
 - 消除了短板：我们不再受制于“最敏感的那个特征”。
 - 我们可以放心地选择一个相对较大的 $\alpha$，这个 $\alpha$ 对所有维度都是适用的、高效的。
 - 此时成本函数$J(\mathbf{w},b)$的等高线接近正圆，梯度下降像是在“走直线”，效率最高。
+
+通常我们
 
 </div>
 
