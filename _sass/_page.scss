@@ -141,7 +141,8 @@
 }
 
 // Allow long MathJax equations to scroll within their own container.
-.MathJax_Display {
+.MathJax_Display,
+.MJXc-display {
   display: block;
   max-width: 100%;
   overflow-x: auto;
@@ -154,7 +155,9 @@
 }
 
 .MathJax_Display > span,
-.MathJax_Display > span > span {
+.MathJax_Display > span > span,
+.MJXc-display > span,
+.MJXc-display > span > span {
   display: inline-block;
   max-width: none;
   white-space: nowrap;
@@ -178,7 +181,8 @@
   position: relative;
 }
 
-.math-scroll .MathJax_Display {
+.math-scroll .MathJax_Display,
+.math-scroll .MJXc-display {
   display: inline-block !important;
   overflow: visible !important;
   margin: 0;
