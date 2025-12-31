@@ -429,6 +429,17 @@
     color: inherit;
     text-decoration: none;
   }
+
+  // Allow long MathJax equations to scroll on small screens.
+  .MathJax_Display {
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+  }
+
+  .MathJax {
+    max-width: 100%;
+  }
 }
 
 // Topic cards for the Deep Dive page.
