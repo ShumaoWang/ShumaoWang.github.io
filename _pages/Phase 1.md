@@ -110,16 +110,19 @@ author_profile: false
         $$J = \frac{1}{2m} \sum (wx + b - y)^2 \tag{6}$$
     
         为了方便计算，我们将 $w\mathbf{x}+b$ 转化为 $X\theta$，其中
-        $X = \begin{pmatrix} 1 & x^{(1)} \\ \vdots & \vdots \\ 1 & x^{(m)} \end{pmatrix}$，
-        $\theta = \begin{pmatrix} b \\ w \end{pmatrix}$，
-        $\mathbf{x}^{(i)} = \begin{pmatrix} 1 & x^{(i)} \end{pmatrix}$ 为行向量。
+
+        $$X = \begin{bmatrix} 1 & x^{(1)} \\ \vdots & \vdots \\ 1 & x^{(m)} \end{bmatrix}, \quad
+        \theta = \begin{bmatrix} b \\ w \end{bmatrix}, \quad
+        \mathbf{x}^{(i)} = \begin{bmatrix} 1 & x^{(i)} \end{bmatrix}$$
 
         $$J = \frac{1}{2m} \sum (\mathbf{x}_{1\times 2}^{(i)}\theta_{2\times 1} - y^{(i)})^2 \tag{7}$$
 
         $$\frac{\partial J}{\partial \theta} = \frac{1}{m} \sum (\mathbf{x}^{(i)}\theta - y^{(i)}) (\mathbf{x}^{(i)})^T = 0 \tag{8}$$
     
         将样本 $\mathbf{x}^{(i)}$ 按行拼接为 $X$，从而去掉 $\sum$ 符号：
-        $X = \begin{pmatrix} \mathbf{x}^{(1)} \\ \vdots  \\ \mathbf{x}^{(m)} \end{pmatrix}=\begin{pmatrix} 1 & x^{(1)} \\ \vdots & \vdots \\ 1 & x^{(m)} \end{pmatrix}$
+
+        $$X = \begin{bmatrix} \mathbf{x}^{(1)} \\ \vdots  \\ \mathbf{x}^{(m)} \end{bmatrix}
+        = \begin{bmatrix} 1 & x^{(1)} \\ \vdots & \vdots \\ 1 & x^{(m)} \end{bmatrix}$$
 
         $$X^T (X\theta - y) = 0 \tag{9}$$
 
@@ -129,11 +132,11 @@ author_profile: false
 
         即：
 
-        $$\begin{pmatrix} b \\ w \end{pmatrix} = (X^T X)^{-1} X^T y \tag{12}$$
+        $$\begin{bmatrix} b \\ w \end{bmatrix} = (X^T X)^{-1} X^T y \tag{12}$$
 
         **为什么可以将 $\begin{cases} \frac{\partial J}{\partial w} = 0 \\ \frac{\partial J}{\partial b} = 0 \end{cases}$ 转化为 $\frac{\partial J}{\partial \theta} = 0$ ?**
 
-        $$\frac{\partial J}{\partial \theta} = 0 \iff \begin{pmatrix} \frac{\partial J}{\partial b} \\ \frac{\partial J}{\partial w} \end{pmatrix} = \mathbf{0} \iff \vec{grad} \ J = \mathbf{0} \quad \text{即最小值点} \tag{13}$$
+        $$\frac{\partial J}{\partial \theta} = 0 \iff \begin{bmatrix} \frac{\partial J}{\partial b} \\ \frac{\partial J}{\partial w} \end{bmatrix} = \mathbf{0} \iff \vec{grad} \ J = \mathbf{0} \quad \text{即最小值点} \tag{13}$$
 
     + 推广到多元线性回归，样本特征维度为 $n$
 
@@ -143,7 +146,9 @@ author_profile: false
 
         其中:
 
-        $$X = \begin{pmatrix} \mathbf{x}^{(1)} \\ \vdots  \\ \mathbf{x}^{(m)} \end{pmatrix}=\underbrace{\begin{bmatrix} 1 & x_1^{(1)} & x_2^{(1)} & \cdots & x_n^{(1)} \\ 1 & x_1^{(2)} & x_2^{(2)} & \cdots & x_n^{(2)} \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 1 & x_1^{(m)} & x_2^{(m)} & \cdots & x_n^{(m)} \end{bmatrix}}_{m \times (n+1)} \quad \theta = \underbrace{\begin{bmatrix} b \\ w_1 \\ w_2 \\ \vdots \\ w_n \end{bmatrix}}_{(n+1) \times 1} \tag{15}$$
+        $$X = \begin{bmatrix} \mathbf{x}^{(1)} \\ \vdots  \\ \mathbf{x}^{(m)} \end{bmatrix}
+        = \underbrace{\begin{bmatrix} 1 & x_1^{(1)} & x_2^{(1)} & \cdots & x_n^{(1)} \\ 1 & x_1^{(2)} & x_2^{(2)} & \cdots & x_n^{(2)} \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 1 & x_1^{(m)} & x_2^{(m)} & \cdots & x_n^{(m)} \end{bmatrix}}_{m \times (n+1)} \quad
+        \theta = \underbrace{\begin{bmatrix} b \\ w_1 \\ w_2 \\ \vdots \\ w_n \end{bmatrix}}_{(n+1) \times 1} \tag{15}$$
 
         同理得:
 
