@@ -42,6 +42,7 @@
       @include full();
     }
   }
+
 }
 
 .page__title {
@@ -542,18 +543,20 @@
 .article-toc {
   display: none;
 
-  @include breakpoint($large) {
+  @include breakpoint($x-large) {
     display: block;
-    flex: 0 0 240px;
-    margin-left: auto;
-    position: sticky;
+    width: 240px;
+    position: fixed;
     top: 6em;
+    right: 1rem;
+    max-height: calc(100vh - 7em);
+    overflow-y: auto;
   }
 }
 
 // Mobile TOC drawer for article pages.
 .toc-mobile {
-  @include breakpoint($large) {
+  @include breakpoint($x-large) {
     display: none;
   }
 }

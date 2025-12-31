@@ -1,4 +1,4 @@
----
+﻿---
 permalink: /deep-dive/dl-ch1/
 title: "Chapter 1: 深度学习的历史趋势"
 excerpt: ""
@@ -6,22 +6,43 @@ author_profile: false
 ---
 
 # Chapter 1: 深度学习的历史趋势
+[Back to Deep Learning Reading Notes]({{ '/deep-dive/dl-reading-notes/' | relative_url }})
 
-[Back to Deep Learning Reading Notes](/deep-dive/dl-reading-notes/)
+<div class="toc-mobile">
+  <input class="toc-toggle" type="checkbox" id="toc-toggle">
+  <label class="toc-toggle__button" for="toc-toggle"><i class="fas fa-list" aria-hidden="true"></i><span class="sr-only">Contents</span></label>
+  <label class="toc-backdrop" for="toc-toggle"></label>
+  <div class="toc-drawer" role="dialog" aria-labelledby="toc-mobile-title">
+    <div class="toc-drawer__inner">
+      <p id="toc-mobile-title" class="toc-block__title">Table of Contents</p>
+      <ul class="toc-block__list">
+        <li><a href="#background">Background</a></li>
+        <li><a href="#xor-polynomial">XOR Polynomial</a></li>
+        <li><a href="#visualization">Visualization</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
+<div class="article-layout">
+  <div class="article-main" markdown="1">
+
+## Background {#background}
 本节来自《Deep Learning》一书的第 1 章笔记。
 
+## XOR Polynomial {#xor-polynomial}
 我通过升维的方式构造了一个多项式函数来处理 XOR 问题，函数如下：
 
 $$
-z = 4\Bigl(\frac{\sqrt{2}}{2}x+\frac{\sqrt{2}}{2}y-\frac{\sqrt{2}}{2}\Bigr)^{2}
-  + 2\Bigl(-\frac{\sqrt{2}}{2}x+\frac{\sqrt{2}}{2}y\Bigr)^{2}
-  - 1
+z = 4\Bigl(\frac{1}{\sqrt{2}}x+\frac{1}{\sqrt{2}}y-\frac{1}{\sqrt{2}}\Bigr)^{2}
+  + 2\Bigl(-\frac{1}{\sqrt{2}}x+\frac{1}{\sqrt{2}}y\Bigr)^{2}
+  - 1 \tag{1}
 $$
 
+## Visualization {#visualization}
 下面是 3D 曲面图（可拖动旋转/缩放）：
 
-<div id="xor-polynomial-plot" style="width: 100%; height: 420px;"></div>
+<div id="xor-polynomial-plot" style="width: 100%; height: 65vh; max-height: 420px;"></div>
 
 <script src="{{ '/assets/vendor/plotly/plotly-2.26.0.min.js' | relative_url }}"></script>
 <script>
@@ -135,3 +156,19 @@ $$
     }
   })();
 </script>
+
+</div>
+  <aside class="article-toc">
+    <details class="toc-panel" open>
+      <summary class="toc-panel__toggle">Contents</summary>
+      <div class="toc-block">
+        <p class="toc-block__title">Table of Contents</p>
+        <ul class="toc-block__list">
+          <li><a href="#background">Background</a></li>
+          <li><a href="#xor-polynomial">XOR Polynomial</a></li>
+          <li><a href="#visualization">Visualization</a></li>
+        </ul>
+      </div>
+    </details>
+  </aside>
+</div>

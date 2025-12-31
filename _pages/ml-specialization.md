@@ -15,7 +15,9 @@ This page collects my study notes for the Machine Learning Specialization. I wil
       <img src="{{ '/images/Gemini_Generated_Image_fv7kltfv7kltfv7k.png' | relative_url }}" alt="Supervised machine learning notes cover" style="width: 100%; height: 220px; object-fit: cover;">
     </div>
     <div class="topic-card__body">
-      <h3 class="topic-card__title">Supervised Machine Learning: Regression and Classification</h3>
+      <h3 class="topic-card__title">
+        <a href="{{ '/deep-dive/ml-supervised/' | relative_url }}" target="_self">Supervised Machine Learning: Regression and Classification</a>
+      </h3>
       <p class="topic-card__meta">Coming soon.</p>
     </div>
   </article>
