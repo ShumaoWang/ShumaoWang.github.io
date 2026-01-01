@@ -208,6 +208,11 @@
   position: relative;
 }
 
+.math-scroll--overflow::after {
+  content: "";
+  display: none;
+}
+
 .math-scroll .mjx-table,
 .math-scroll .mjx-math {
   width: -moz-max-content;
@@ -568,11 +573,13 @@ mjx-container[display="true"] > mjx-math {
   display: flex;
   align-items: stretch;
   min-height: 220px;
+  touch-action: pan-y;
 }
 
 .topic-card__plot {
   width: 100%;
   height: 100%;
+  pointer-events: none;
 }
 
 .topic-card__body {

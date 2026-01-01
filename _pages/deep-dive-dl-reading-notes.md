@@ -79,7 +79,7 @@ author_profile: false
 
       var angle = 0;
       setInterval(function () {
-        angle += 0.03;
+        angle += 0.015;
         Plotly.relayout("dl-ch1-preview", {
           "scene.camera.eye": {
             x: 1.4 * Math.cos(angle),
@@ -87,7 +87,7 @@ author_profile: false
             z: 0.8
           }
         });
-      }, 80);
+      }, 40);
     }
 
     if (document.readyState === "loading") {
