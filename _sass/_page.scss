@@ -208,14 +208,11 @@
   position: relative;
 }
 
-.math-scroll--overflow::after {
-  content: "scroll";
-  position: absolute;
-  right: 0.25rem;
-  bottom: 0;
-  font-size: 0.75rem;
-  color: mix(#000, $gray, 45%);
-  pointer-events: none;
+.math-scroll .mjx-table,
+.math-scroll .mjx-math {
+  width: -moz-max-content;
+  width: max-content;
+  max-width: none;
 }
 
 mjx-container[display="true"] {
