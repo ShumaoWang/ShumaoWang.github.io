@@ -22,12 +22,12 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author (shown in sidebar/profile)
 author:
   name             : "Shumao Wang (王树茂)" # full name
-  avatar           : "images/android-chrome-512x512.png" # path to avatar image
+  avatar           : "images/avatar-running.jpg" # path to avatar image
   bio              : "Senior undergraduate student in Computer Science, Xi'an University of Architecture and Technology" # short bio / affiliation
   location         : "Chengdu, China"
   employer         : # optional
   pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
+  googlescholar    :
   email            : "MsEEicoding@gmail.com"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              : # personal website URL

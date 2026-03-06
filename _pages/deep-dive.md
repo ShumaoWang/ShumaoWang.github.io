@@ -9,9 +9,9 @@ author_profile: false
 
 This page collects my learning notes and reflections on machine learning. I will keep it updated as I study and build projects.
 
-# Early Notes and Reflections
-- [AcWing](https://www.acwing.com/user/myspace/record/407567/)
-- [Cnblogs](https://www.cnblogs.com/MsEEicoding)
+<p style="margin: 1.25rem 0 1.75rem 0;">
+  <img src="{{ '/images/Gemini_Generated_Image_8dju1j8dju1j8dju.png' | relative_url }}" alt="Deep Dive into Machine Learning cover" style="width: 100%; max-width: 360px; height: auto; border-radius: 10px; display: block;">
+</p>
 
 # Topics
 <div class="topic-cards">

@@ -25,14 +25,8 @@ Hello! I am Shumao Wang (Wang Shumao), based in Chengdu, China. I am a senior un
 # Publications
 - Coming soon.
 
-# Honors and Awards
-- Coming soon.
-
 # Education
 - B.S. in Computer Science, Xi'an University of Architecture and Technology (in progress)
-
-# Invited Talks
-- Coming soon.
 
 # Internships
 - Coming soon.

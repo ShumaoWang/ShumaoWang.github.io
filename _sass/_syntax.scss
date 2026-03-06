@@ -34,6 +34,66 @@ div.highlighter-rouge, figure.highlight {
   }
 }
 
+details.code-block {
+  margin-bottom: 1em;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  background-color: $code-background-color;
+  box-shadow: $box-shadow;
+
+  > summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6em 1em;
+    cursor: pointer;
+    font-size: $type-size-6;
+    font-weight: 600;
+    color: $text-color;
+    background-color: $lighter-gray;
+    list-style: none;
+  }
+
+  > summary::marker {
+    content: "";
+  }
+
+  > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  > summary::after {
+    content: "Show";
+    font-size: $type-size-7;
+    color: $gray;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  &[open] > summary::after {
+    content: "Hide";
+  }
+
+  &[open] > summary {
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+details.code-block div.highlighter-rouge,
+details.code-block figure.highlight {
+  margin: 0;
+  padding: 1.25em;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+details.code-block div.highlighter-rouge:before,
+details.code-block figure.highlight:before {
+  content: none;
+}
+
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
 

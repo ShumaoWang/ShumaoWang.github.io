@@ -9,16 +9,13 @@ main:
   - title: "Publications"
     url: "/#publications"
 
-  - title: "Honors and Awards"
-    url: "/#honors-and-awards"
 
   - title: "Educations"
     url: "/#education"
-
-  - title: "Invited Talks"
-    url: "/#invited-talks"
 
   - title: "Internships"
     url: "/#internships"
   - title: "Deep Dive into Machine Learning"
     url: "/deep-dive/"
+  - title: "Algorithms"
+    url: "/algorithms/"
