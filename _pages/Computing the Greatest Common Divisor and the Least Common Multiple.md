@@ -126,40 +126,16 @@ $$
 这也是编程实现中最常用、最稳定的一种思路。
 
 ```c
-#include<stdio.h>
-
 //求x, y的最大公约数
 int gcd(int x, int y)
 {
-    if(x > y)
+	while(y != 0)
     {
         int r = x % y;
-        while(r)
-        {
-            int tmp = r;
-            r = y % r;
-            y = tmp;
-        }
-        return y;
+        x = y;
+        y = r;
     }
-    else
-    {
-        int r = y % x;
-        while(r)
-        {
-            int tmp = r;
-            r = x % r;
-            x = tmp;
-        }
-        return x;
-    }
-}
-int main()
-{
-	int x, y;
-	scanf("%d%d", &x, &y);
-	printf("%d", gcd(x, y));
-	return 0;
+    return x;
 }
 ```
 

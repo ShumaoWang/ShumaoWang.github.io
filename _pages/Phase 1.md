@@ -25,9 +25,9 @@ author_profile: false
     </div>
   </div>
 </div>
-
 <div class="article-layout">
   <div class="article-main" markdown="1">
+
 
 ## 一维数组的歧义 {#array-ambiguity}
 使用一维数组表示样本和特征具有二义性  
