@@ -599,6 +599,29 @@ mjx-container[display="true"] > mjx-math {
   line-height: 1.6;
 }
 
+.update-card {
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0;
+}
+
+.update-card__media {
+  flex: 0 0 112px;
+
+  @include breakpoint($medium) {
+    flex-basis: 128px;
+  }
+}
+
+.update-card .topic-card__body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.update-card .topic-card__title {
+  margin-bottom: 0.35rem;
+}
+
 // Table of contents styling for Deep Dive articles.
 .toc-block {
   margin: 0;

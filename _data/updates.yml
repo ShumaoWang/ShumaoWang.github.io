@@ -1,0 +1,25 @@
+# Keep newest items first.
+- title: "Computing the Greatest Common Divisor and the Least Common Multiple"
+  url: "/algorithms/gcd-and-lcm/"
+  image: "/images/image-20260311161447314.png"
+  summary: "A short note on prime factorization, the Euclidean algorithm, and how to derive LCM from GCD."
+
+- title: "Some Interesting Problems from the Written Exam for UESTC SCSE's Postgraduate Re-examination"
+  url: "/algorithms/uestc-scse-written-exam-problems/"
+  image: "/images/uestc-scse-written-exam-cover.jpg"
+  summary: "Selected written-exam problems and notes from UESTC SCSE's postgraduate re-examination."
+
+- title: "AtCoder Beginner Contest 439 : Restart"
+  url: "/algorithms/atcoder-beginner-contest-439-restart/"
+  image: "/images/Gemini_Generated_Image_c20rjcc20rjcc20r.png"
+  summary: "A new algorithm note for AtCoder Beginner Contest 439."
+
+- title: "Supervised Machine Learning: Regression and Classification"
+  url: "/deep-dive/ml-supervised/"
+  image: "/images/Gemini_Generated_Image_99lxxk99lxxk99lx.png"
+  summary: "Study notes and exercises from the first course of the Machine Learning Specialization."
+
+- title: "Deep Learning Reading Notes"
+  url: "/deep-dive/dl-reading-notes/"
+  image: "/images/487a3f84-ffff-40cc-beae-edba1e002a43.jpg"
+  summary: "Notes and experiments from the book Deep Learning."
