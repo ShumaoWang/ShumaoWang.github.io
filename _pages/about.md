@@ -36,7 +36,7 @@ Recent articles and refreshed notes are listed here for quick access.
     {% endif %}
     <div class="topic-card__body">
       {% if item.date %}
-      <p class="topic-card__meta">Published: {{ item.date }}</p>
+      <p class="topic-card__meta">Updated: {{ item.date }}</p>
       {% endif %}
       <h3 class="topic-card__title">
         <a href="{{ item.url | relative_url }}" target="_self">{{ item.title }}</a>

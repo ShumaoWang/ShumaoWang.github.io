@@ -662,6 +662,55 @@ mjx-container[display="true"] > mjx-math {
   flex: 1 1 auto;
   min-width: 0;
   width: 100%;
+  line-height: 1.8;
+
+  > p:first-child {
+    margin-bottom: 1.5rem;
+    color: mix(#fff, $gray, 18%);
+    font-size: $type-size-5;
+  }
+
+  h2 {
+    margin-top: 2.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid $border-color;
+  }
+
+  h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.85rem;
+  }
+
+  h4 {
+    margin-top: 1.15rem;
+    margin-bottom: 0.7rem;
+    color: mix(#fff, $gray, 22%);
+    font-size: $type-size-6;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  p,
+  ul,
+  ol,
+  dl,
+  blockquote,
+  div.highlighter-rouge,
+  figure.highlight {
+    margin-bottom: 1.15rem;
+  }
+
+  ul,
+  ol {
+    padding-left: 1.45rem;
+  }
+
+  div.highlighter-rouge,
+  figure.highlight {
+    margin-top: 1.3rem;
+    margin-bottom: 1.85rem;
+  }
 }
 
 .article-toc {
