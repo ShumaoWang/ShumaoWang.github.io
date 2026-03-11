@@ -58,7 +58,42 @@ $(document).ready(function(){
   });
 
   // init smooth scroll
-  $("a").smoothScroll({offset: -20});
+  $("a").not(".toc-mobile a[href^='#']").smoothScroll({offset: -20});
+
+  var getTocScrollOffset = function() {
+    var masthead = $(".masthead");
+    return -(masthead.length ? masthead.outerHeight() + 12 : 20);
+  };
+
+  $(".toc-mobile a[href^='#']").on("click", function(event) {
+    var targetId = this.getAttribute("href");
+    var $target = $(targetId);
+
+    if (!targetId || targetId === "#" || !$target.length) {
+      return;
+    }
+
+    event.preventDefault();
+
+    $(this).closest(".toc-mobile").find(".toc-toggle").prop("checked", false);
+
+    $.smoothScroll({
+      scrollTarget: targetId,
+      offset: getTocScrollOffset(),
+      speed: 400,
+      afterScroll: function() {
+        if (window.history && window.history.replaceState) {
+          window.history.replaceState(
+            null,
+            document.title,
+            window.location.pathname + window.location.search + targetId
+          );
+        } else {
+          window.location.hash = targetId;
+        }
+      }
+    });
+  });
 
   // add lightbox class to all image links
   $("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
