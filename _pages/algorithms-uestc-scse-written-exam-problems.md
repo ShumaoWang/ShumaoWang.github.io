@@ -26,7 +26,7 @@ author_profile: false
         <li><a href="#problem-c">Problem C</a></li>
         <li><a href="#problem-d">Problem D</a></li>
         <li><a href="#uestc-2023">UESTC SCSE 2023复试笔试</a></li>
-        <li><a href="#uestc-2023-short-answer">一、 简答题</a></li>
+        <li><a href="#uestc-2023-short-answer">Short answer</a></li>
         <li><a href="#uestc-2023-problem-a">Problem A</a></li>
         <li><a href="#uestc-2023-problem-b">Problem B</a></li>
         <li><a href="#uestc-2023-problem-c">Problem C</a></li>
@@ -490,7 +490,7 @@ for (int numb=0; array[numb]!=item; numb++);
           <li><a href="#problem-c">Problem C</a></li>
           <li><a href="#problem-d">Problem D</a></li>
           <li><a href="#uestc-2023">UESTC SCSE 2023复试笔试</a></li>
-          <li><a href="#uestc-2023-short-answer">一、 简答题</a></li>
+          <li><a href="#uestc-2023-short-answer">Short answer</a></li>
           <li><a href="#uestc-2023-problem-a">Problem A</a></li>
           <li><a href="#uestc-2023-problem-b">Problem B</a></li>
           <li><a href="#uestc-2023-problem-c">Problem C</a></li>
