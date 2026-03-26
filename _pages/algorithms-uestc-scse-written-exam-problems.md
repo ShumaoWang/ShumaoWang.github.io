@@ -31,6 +31,8 @@ author_profile: false
         <li><a href="#uestc-2023-problem-b">Problem B</a></li>
         <li><a href="#uestc-2023-problem-c">Problem C</a></li>
         <li><a href="#uestc-2023-problem-d">Problem D</a></li>
+        <li><a href="#uestc-2019">UESTC SCSE 2019复试笔试</a></li>
+        <li><a href="#uestc-2019-problem-d">Problem D</a></li>
       </ul>
     </div>
   </div>
@@ -477,6 +479,53 @@ for (int numb=0; array[numb]!=item; numb++);
 
 我这里链表初始化的时候, 整成数组指针那种连续分配了, 搞错了. 同时结束时忘记释放内存了.
 
+
+
+## UESTC SCSE 2019复试笔试(成电 计算机学院) {#uestc-2019}
+
+### Problem D {#uestc-2019-problem-d}
+
+一个循环数组，大小为 `n`，知道是有序的，但不知道哪个方向有序，也不知道起点在哪里。
+请你设计一个算法，找出数组里的最小值，要求时间复杂度 `O(logn)`，没达到不得分，且要求描述算法思想并实现。
+
+#### Solution
+
+这一题很有意思, 这题可以抽象成一个有序环, 我们从任一点将环断开, 放到数组内, 形成此循环数组, 也就说最终数组会形成1个或2个有序段, 那么, 我们要找数组内的最小值, 其实就是找断点的位置, 要求时间复杂度是`O(logn)`, 于是想到二分, 也就是用二分的方法找断点位置, 我们发现两个分段有确定的大小关系, 即一个段所有数都比另一个段大, 利用这个关系, 来找断点. 即断点一定处于两个段的交界处, 那么`mid`会落在一个段内, `l`, `r`也会在某个段内, 我们将`a[mid]`与两个端点比大小, 即可判断其是否在一个段内, 从而确定断点与`mid`的位置关系.
+
+ 考虑两种情况
+
++ 环为升序, 则我们与右端点比, 如果和右端点在一个段内, 即`a[mid]<a[r]`, 那直接移动右端点, 因为要找最小值, 该值不可能为`a[r]`, 若不在一个段内, 那断点就位于`mid~r`之间, 于是移动左端点
++ 环为降序, 如果我们仍与右端点比, 若和右端点在一个段内, 即`a[mid]>a[r]`, 此时还能直接移动右端点吗, 不行了, 因为有`a[mid]>a[r]`, 我们不能保证最小值点不会出现在`r`处, 所以此时我们要和左端点比, 这样当`mid`和`r`在一个段内, 即`a[mid]<a[l]`, 我们可以保证`l`处不可能为最小值点, 从而移动左端点, 来找断点.
+
+```c
+int FindMinimum(int a[], int n)
+{
+    int tmp1 = 0x7fffffff; //假设为升序序列, 得到的最小值
+    int tmp2 = 0x7fffffff; //假设为降序序列, 得到的最小值
+    //假设为升序序列
+    int l = 0, r = n - 1;
+    while(l < r)
+    {
+        int mid = (l + r) / 2;
+        if(a[mid] > a[r]) l = mid + 1;
+        else r = mid;
+    }
+    tmp1 = a[l];
+    //假设为降序序列
+    l = 0, r = n - 1;
+    while(l < r)
+    {
+        int mid = (l + r + 1) / 2; //防止l + 1 == r且有序时, 卡死 ex. 3, 4
+        if(a[l] < a[mid]) r = mid - 1;
+        else l = mid;
+    }
+    tmp2 = a[l];
+    return tmp1 > tmp2 ? tmp2 : tmp1;
+}
+```
+
+当然了, 也可以先对数组进行升序或降序判断, 确定后就选择一种方式进行二分即可.
+
 </div>
   <aside class="article-toc">
     <details class="toc-panel" open>
@@ -495,6 +544,8 @@ for (int numb=0; array[numb]!=item; numb++);
           <li><a href="#uestc-2023-problem-b">Problem B</a></li>
           <li><a href="#uestc-2023-problem-c">Problem C</a></li>
           <li><a href="#uestc-2023-problem-d">Problem D</a></li>
+          <li><a href="#uestc-2019">UESTC SCSE 2019复试笔试</a></li>
+          <li><a href="#uestc-2019-problem-d">Problem D</a></li>
         </ul>
       </div>
     </details>
