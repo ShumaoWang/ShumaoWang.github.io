@@ -3,7 +3,18 @@ permalink: /algorithms/uestc-scse-written-exam-problems/
 title: "Some Interesting Problems from the Written Exam for UESTC SCSE's Postgraduate Re-examination"
 excerpt: ""
 author_profile: false
+hide_from_public: true
+sitemap: false
 ---
+
+{% if page.hide_from_public and jekyll.environment == "production" %}
+<script>
+  window.location.replace("{{ '/algorithms/' | relative_url }}");
+</script>
+
+<p>This page is hidden in the public build.</p>
+<p><a href="{{ '/algorithms/' | relative_url }}">Back to Algorithms</a></p>
+{% else %}
 
 # Some Interesting Problems from the Written Exam for UESTC SCSE's Postgraduate Re-examination
 
@@ -551,3 +562,4 @@ int FindMinimum(int a[], int n)
     </details>
   </aside>
 </div>
+{% endif %}

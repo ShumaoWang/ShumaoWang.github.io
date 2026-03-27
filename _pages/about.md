@@ -27,7 +27,11 @@ Recent articles and refreshed notes are listed here for quick access.
 
 {% if site.data.updates and site.data.updates.size > 0 %}
 <div class="topic-cards">
-  {% for item in site.data.updates limit: 3 %}
+  {% assign visible_updates = 0 %}
+  {% for item in site.data.updates %}
+  {% if item.hide_in_production and jekyll.environment == "production" %}
+  {% continue %}
+  {% endif %}
   <article class="topic-card update-card">
     {% if item.image %}
     <div class="topic-card__media update-card__media">
@@ -46,6 +50,10 @@ Recent articles and refreshed notes are listed here for quick access.
       {% endif %}
     </div>
   </article>
+  {% assign visible_updates = visible_updates | plus: 1 %}
+  {% if visible_updates >= 3 %}
+  {% break %}
+  {% endif %}
   {% endfor %}
 </div>
 {% else %}

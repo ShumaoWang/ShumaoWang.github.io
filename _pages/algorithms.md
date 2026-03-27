@@ -31,6 +31,7 @@ This page collects my algorithm contest solutions and notes.
 # Solutions
 
 <div class="topic-cards">
+  {% unless jekyll.environment == "production" %}
   <article class="topic-card">
     <div class="topic-card__media">
       <img src="{{ '/images/uestc-scse-written-exam-cover.jpg' | relative_url }}" alt="UESTC SCSE postgraduate re-examination written exam cover" style="width: 100%; height: 220px; object-fit: cover;">
@@ -42,6 +43,7 @@ This page collects my algorithm contest solutions and notes.
       <p class="topic-card__meta">Selected written-exam problems and notes from UESTC SCSE's postgraduate re-examination.</p>
     </div>
   </article>
+  {% endunless %}
   <article class="topic-card">
     <div class="topic-card__media">
       <img src="{{ '/images/Gemini_Generated_Image_c20rjcc20rjcc20r.png' | relative_url }}" alt="AtCoder Beginner Contest 439 cover" style="width: 100%; height: 220px; object-fit: cover;">

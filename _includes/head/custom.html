@@ -7,6 +7,9 @@
 <meta name="msapplication-TileColor" content="#000000">
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="{{ '/assets/css/academicons.css' | relative_url }}">
+{% if page.hide_from_public and jekyll.environment == "production" %}
+<meta name="robots" content="noindex, nofollow">
+{% endif %}
 
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "none" } } }); </script>
 <script type="text/x-mathjax-config">

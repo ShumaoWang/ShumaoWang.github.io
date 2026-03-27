@@ -3,6 +3,7 @@
   date: "2026-03-22"
   url: "/algorithms/uestc-scse-written-exam-problems/"
   image: "/images/uestc-scse-written-exam-cover.jpg"
+  hide_in_production: true
   summary: "Selected written-exam problems and notes from UESTC SCSE's postgraduate re-examination."
 
 - title: "Computing the Greatest Common Divisor and the Least Common Multiple"
