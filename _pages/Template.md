@@ -1,4 +1,5 @@
 ---
+published: false
 permalink: /algorithms/uestc-scse-written-exam-problems/
 title: "Some Interesting Problems from the Written Exam for UESTC SCSE's Postgraduate Re-examination"
 excerpt: ""

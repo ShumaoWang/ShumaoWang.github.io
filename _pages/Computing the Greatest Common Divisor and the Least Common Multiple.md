@@ -3,6 +3,9 @@ permalink: /algorithms/gcd-and-lcm/
 title: "Computing the Greatest Common Divisor and the Least Common Multiple"
 excerpt: ""
 author_profile: false
+description: "A note on prime factorization, the Euclidean algorithm, and deriving LCM from GCD."
+schema_type: "Article"
+lang: "zh-CN"
 ---
 
 # 求解最大公约数 GCD 与最小公倍数 LCM 的两个方法

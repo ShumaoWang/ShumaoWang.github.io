@@ -58,6 +58,33 @@
   font-size: $type-size-7;
 }
 
+.page__footer-mapmyvisitors {
+  max-width: 400px;
+  margin: 0 auto;
+  padding-top: 1rem;
+  text-align: center;
+
+  > * {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  img,
+  iframe,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.page__footer-caption {
+  margin-bottom: 0.75rem;
+  color: $gray;
+  font-size: $type-size-6;
+}
+
 .page__footer-follow {
   ul {
     margin: 0;

@@ -3,6 +3,8 @@ permalink: /deep-dive/reading-notes/
 title: "Reading Notes and Paper Summaries"
 excerpt: ""
 author_profile: false
+description: "Short summaries, paper notes, and recurring takeaways from Shumao Wang's reading log."
+schema_type: "CollectionPage"
 ---
 
 # Reading Notes and Paper Summaries

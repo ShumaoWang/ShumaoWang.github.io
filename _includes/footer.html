@@ -1,0 +1,10 @@
+{% if page.url == '/' and site.mapmyvisitors_src and site.mapmyvisitors_src != '' %}
+<div class="page__footer">
+  <footer>
+    <div class="page__footer-mapmyvisitors">
+      <p class="page__footer-caption">Visitor Map</p>
+      <script type="text/javascript" id="mapmyvisitors" src="{{ site.mapmyvisitors_src }}"></script>
+    </div>
+  </footer>
+</div>
+{% endif %}

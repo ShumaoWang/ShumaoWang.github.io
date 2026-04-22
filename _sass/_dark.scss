@@ -1,0 +1,195 @@
+$dark-bg: #101418;
+$dark-surface: #172026;
+$dark-surface-strong: #1d2831;
+$dark-border: #2e3b46;
+$dark-text: #e4ebf3;
+$dark-muted: #9fb0c0;
+$dark-link: #8ab4ff;
+$dark-link-hover: #bdd3ff;
+$dark-accent: #7fa6ff;
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+html[data-theme="dark"] body {
+  background: $dark-bg;
+  color: $dark-text;
+}
+
+html[data-theme="dark"] .masthead,
+html[data-theme="dark"] .greedy-nav,
+html[data-theme="dark"] .page__footer,
+html[data-theme="dark"] .topic-card,
+html[data-theme="dark"] .page__toc,
+html[data-theme="dark"] .toc-block,
+html[data-theme="dark"] .toc-panel,
+html[data-theme="dark"] .toc-panel__toggle,
+html[data-theme="dark"] .toc-drawer,
+html[data-theme="dark"] .greedy-nav .hidden-links,
+html[data-theme="dark"] .author__urls,
+html[data-theme="dark"] .theme-toggle,
+html[data-theme="dark"] .mobile-home-button,
+html[data-theme="dark"] .back-to-top,
+html[data-theme="dark"] .toc-toggle__button,
+html[data-theme="dark"] div.highlighter-rouge,
+html[data-theme="dark"] figure.highlight,
+html[data-theme="dark"] details.code-block,
+html[data-theme="dark"] .modal,
+html[data-theme="dark"] .well {
+  background: $dark-surface;
+  color: $dark-text;
+  border-color: $dark-border;
+}
+
+html[data-theme="dark"] .greedy-nav button,
+html[data-theme="dark"] .reading-progress__bar,
+html[data-theme="dark"] .toc .nav__title,
+html[data-theme="dark"] .nav__list .active {
+  background: $dark-accent;
+}
+
+html[data-theme="dark"] .reading-progress {
+  background: rgba($dark-accent, 0.22);
+}
+
+html[data-theme="dark"] a,
+html[data-theme="dark"] .greedy-nav a,
+html[data-theme="dark"] .toc__menu a,
+html[data-theme="dark"] .author__urls a,
+html[data-theme="dark"] .page__footer a {
+  color: $dark-link;
+}
+
+html[data-theme="dark"] a:hover,
+html[data-theme="dark"] .greedy-nav a:hover,
+html[data-theme="dark"] .toc__menu a:hover,
+html[data-theme="dark"] .author__urls a:hover,
+html[data-theme="dark"] .page__footer a:hover {
+  color: $dark-link-hover;
+}
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6,
+html[data-theme="dark"] .author__name,
+html[data-theme="dark"] .topic-card__title,
+html[data-theme="dark"] .page__toc-title,
+html[data-theme="dark"] .toc-block__title {
+  color: $dark-text;
+}
+
+html[data-theme="dark"] p,
+html[data-theme="dark"] li,
+html[data-theme="dark"] dd,
+html[data-theme="dark"] dt,
+html[data-theme="dark"] blockquote,
+html[data-theme="dark"] .topic-card__meta,
+html[data-theme="dark"] .page__meta,
+html[data-theme="dark"] .author__bio,
+html[data-theme="dark"] .author__meta-line,
+html[data-theme="dark"] .page__footer-caption,
+html[data-theme="dark"] .page__footer-copyright {
+  color: $dark-muted;
+}
+
+html[data-theme="dark"] hr,
+html[data-theme="dark"] .page__content h1,
+html[data-theme="dark"] .article-main h2,
+html[data-theme="dark"] .page__share,
+html[data-theme="dark"] .page__related,
+html[data-theme="dark"] .page__comments-title,
+html[data-theme="dark"] .nav__sub-title,
+html[data-theme="dark"] .greedy-nav .hidden-links li,
+html[data-theme="dark"] details.code-block[open] > summary {
+  border-color: $dark-border;
+}
+
+html[data-theme="dark"] p > code,
+html[data-theme="dark"] a > code,
+html[data-theme="dark"] li > code,
+html[data-theme="dark"] figcaption > code,
+html[data-theme="dark"] td > code,
+html[data-theme="dark"] details.code-block > summary,
+html[data-theme="dark"] .highlight table td {
+  background: $dark-surface-strong;
+  color: $dark-text;
+  border-color: $dark-border;
+}
+
+html[data-theme="dark"] blockquote {
+  border-left-color: $dark-accent;
+}
+
+html[data-theme="dark"] .greedy-nav .visible-links a:before {
+  background: rgba($dark-link, 0.8);
+}
+
+html[data-theme="dark"] .greedy-nav .hidden-links:before {
+  border-color: $dark-border transparent;
+}
+
+html[data-theme="dark"] .greedy-nav .hidden-links:after,
+html[data-theme="dark"] .author__urls:after {
+  border-color: $dark-surface transparent;
+}
+
+html[data-theme="dark"] .author__urls:before {
+  border-color: $dark-border transparent;
+}
+
+html[data-theme="dark"] .toc-backdrop {
+  background: rgba(#000, 0.55);
+}
+
+html[data-theme="dark"] .author__avatar img {
+  border-color: $dark-border;
+}
+
+html[data-theme="dark"] .toc-toggle__button,
+html[data-theme="dark"] .mobile-home-button,
+html[data-theme="dark"] .back-to-top,
+html[data-theme="dark"] .theme-toggle {
+  box-shadow: 0 8px 20px rgba(#000, 0.32);
+}
+
+html[data-theme="dark"] .highlight .c,
+html[data-theme="dark"] .highlight .c1,
+html[data-theme="dark"] .highlight .cm,
+html[data-theme="dark"] .highlight .w {
+  color: #8ea0b1;
+}
+
+html[data-theme="dark"] .highlight .k,
+html[data-theme="dark"] .highlight .o,
+html[data-theme="dark"] .highlight .ow {
+  color: #9ad16d;
+}
+
+html[data-theme="dark"] .highlight .s,
+html[data-theme="dark"] .highlight .s1,
+html[data-theme="dark"] .highlight .s2,
+html[data-theme="dark"] .highlight .si,
+html[data-theme="dark"] .highlight .ss,
+html[data-theme="dark"] .highlight .m,
+html[data-theme="dark"] .highlight .mf,
+html[data-theme="dark"] .highlight .mi,
+html[data-theme="dark"] .highlight .mo {
+  color: #73d2de;
+}
+
+html[data-theme="dark"] .highlight .nf,
+html[data-theme="dark"] .highlight .nt,
+html[data-theme="dark"] .highlight .nc,
+html[data-theme="dark"] .highlight .nb,
+html[data-theme="dark"] .highlight .kr,
+html[data-theme="dark"] .highlight .bp,
+html[data-theme="dark"] .highlight .nv,
+html[data-theme="dark"] .highlight .vc,
+html[data-theme="dark"] .highlight .vg,
+html[data-theme="dark"] .highlight .vi {
+  color: #8ab4ff;
+}

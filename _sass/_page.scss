@@ -140,6 +140,71 @@
   }
 }
 
+.page__toc {
+  margin: 1.25rem 0 2rem 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  background: $lighter-gray;
+
+  > ul {
+    margin-bottom: 0;
+    padding-left: 1.25rem;
+  }
+
+  li {
+    margin: 0.35rem 0;
+  }
+}
+
+.page__toc-title {
+  margin: 0 0 0.75rem 0;
+  font-size: $type-size-5;
+}
+
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 25;
+  width: 100%;
+  height: 4px;
+  background: rgba($primary-color, 0.12);
+}
+
+.reading-progress__bar {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: $primary-color;
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.back-to-top {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 45;
+  width: 44px;
+  height: 44px;
+  border: 1px solid $border-color;
+  border-radius: 999px;
+  background: #fff;
+  color: $primary-color;
+  box-shadow: 0 6px 16px rgba(#000, 0.12);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translateY(8px);
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
 // Allow long MathJax equations to scroll within their own container.
 .MathJax_Display,
 .MJXc-display {

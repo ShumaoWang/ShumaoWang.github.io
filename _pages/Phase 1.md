@@ -3,6 +3,9 @@ permalink: /deep-dive/ml-supervised/
 title: "Supervised Machine Learning: Regression and Classification"
 excerpt: ""
 author_profile: false
+description: "监督学习课程笔记，涵盖正规方程、梯度下降、特征缩放与多项式回归。"
+schema_type: "Article"
+lang: "zh-CN"
 ---
 
 # Supervised Machine Learning: Regression and Classification - Study Notes
@@ -21,6 +24,11 @@ author_profile: false
         <li><a href="#gradient-descent">梯度下降与凸函数</a></li>
         <li><a href="#numpy-dim">numpy 维度理解</a></li>
         <li><a href="#normal-equation">谈一谈正规方程</a></li>
+        <li><a href="#rescaling">rescaling 是一个很妙的优化方法</a></li>
+        <li><a href="#why-feature-scaling">为什么我们可以对特征做标准化/均值归一化?</a></li>
+        <li><a href="#polynomial-regression">使用多项式回归方法(Polynomial Regression)在线性回归模型中解决非线性问题</a></li>
+        <li><a href="#feature-selection">梯度下降方法也可以便于我们选出合适的特征</a></li>
+        <li><a href="#question">Question</a></li>
       </ul>
     </div>
   </div>
@@ -169,7 +177,7 @@ author_profile: false
 
 
 
-## rescaling 是一个很妙的优化方法
+## rescaling 是一个很妙的优化方法 {#rescaling}
 
 对于具有多个特征维度的回归问题来说, 特征归一化是一个很重要的优化方法. 通过将所有特征的取值范围(尺度)都压缩到统一的$[-1, 1]$或$[-0.5,0.5]$的区间, 使得我们在做梯度下降时, 统一每个方向的步长大小, 从而避免出现在学习率 $\alpha$ 固定时(步长比例相同), 某个方向步长过大, 某个方向步长过小, 使得梯度下降过程收敛缓慢**甚至发散**.![Gemini_Generated_Image_s6f0mus6f0mus6f0](https://typora-mseei.oss-cn-chengdu.aliyuncs.com/Gemini_Generated_Image_s6f0mus6f0mus6f0.png)
 
@@ -407,7 +415,7 @@ plt.show()
 
 
 
-### 为什么我们可以对特征做标准化/均值归一化? 
+### 为什么我们可以对特征做标准化/均值归一化? {#why-feature-scaling}
 
 **不会造成原数据的分布改变从而使得标准化后训练出的模型并不能拟合原数据的分布吗?**
 
@@ -453,7 +461,7 @@ $$\bar{y} = w \bar{x} + b$$
 
 
 
-## 使用多项式回归方法(Polynomial Regression)在线性回归模型中解决非线性问题
+## 使用多项式回归方法(Polynomial Regression)在线性回归模型中解决非线性问题 {#polynomial-regression}
 
 多项式回归假设
 
@@ -473,13 +481,13 @@ $\hat y = \mathbf w^\top \phi(x).$
 
 
 
-## 梯度下降方法也可以便于我们选出合适的特征
+## 梯度下降方法也可以便于我们选出合适的特征 {#feature-selection}
 
 在特征均进行标准化的前提下(统一尺度), Gradient descent is picking the 'correct' features for us by emphasizing its associated parameter, 梯度下降方法通过调整各个 $w_i$ 的取值, 逼近cost function的最小值点, 收敛后, 观察各个 $w_i$ 的取值, 我们可以知道哪些特征对于模型的输出/预测是重要的, 哪些特征have slightly impact on the model prediction. 从而便于我们选出合适的输入特征.
 
 
 
-## Question
+## Question {#question}
 
 正规方程
 
@@ -502,6 +510,11 @@ rescaling
           <li><a href="#gradient-descent">梯度下降与凸函数</a></li>
           <li><a href="#numpy-dim">numpy 维度理解</a></li>
           <li><a href="#normal-equation">谈一谈正规方程</a></li>
+          <li><a href="#rescaling">rescaling 是一个很妙的优化方法</a></li>
+          <li><a href="#why-feature-scaling">为什么我们可以对特征做标准化/均值归一化?</a></li>
+          <li><a href="#polynomial-regression">使用多项式回归方法(Polynomial Regression)在线性回归模型中解决非线性问题</a></li>
+          <li><a href="#feature-selection">梯度下降方法也可以便于我们选出合适的特征</a></li>
+          <li><a href="#question">Question</a></li>
         </ul>
       </div>
     </details>

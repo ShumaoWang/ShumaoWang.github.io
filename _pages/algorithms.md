@@ -2,12 +2,21 @@
 permalink: /algorithms/
 title: "Algorithms"
 excerpt: ""
+description: "Algorithm notes, contest solutions, and selected problem writeups collected by Shumao Wang."
 author_profile: false
+schema_type: "CollectionPage"
 ---
 
 # Algorithms
 
 This page collects my algorithm contest solutions and notes.
+
+<div class="page__toc" markdown="1">
+<p class="page__toc-title">On this page</p>
+
+* TOC
+{:toc}
+</div>
 
 # Early Notes and Reflections
 - [AcWing](https://www.acwing.com/user/myspace/record/407567/)
@@ -17,7 +26,7 @@ This page collects my algorithm contest solutions and notes.
 <div class="topic-cards">
   <article class="topic-card">
     <div class="topic-card__media">
-      <img src="{{ '/images/image-20260311161447314.png' | relative_url }}" alt="GCD and LCM note cover" style="width: 100%; height: 220px; object-fit: cover;">
+      <img src="{{ '/images/image-20260311161447314.png' | relative_url }}" alt="GCD and LCM note cover" loading="lazy" decoding="async" style="width: 100%; height: 220px; object-fit: cover;">
     </div>
     <div class="topic-card__body">
       <h3 class="topic-card__title">
@@ -34,7 +43,7 @@ This page collects my algorithm contest solutions and notes.
   {% unless jekyll.environment == "production" %}
   <article class="topic-card">
     <div class="topic-card__media">
-      <img src="{{ '/images/uestc-scse-written-exam-cover.jpg' | relative_url }}" alt="UESTC SCSE postgraduate re-examination written exam cover" style="width: 100%; height: 220px; object-fit: cover;">
+      <img src="{{ '/images/uestc-scse-written-exam-cover.jpg' | relative_url }}" alt="UESTC SCSE postgraduate re-examination written exam cover" loading="lazy" decoding="async" style="width: 100%; height: 220px; object-fit: cover;">
     </div>
     <div class="topic-card__body">
       <h3 class="topic-card__title">
@@ -46,7 +55,7 @@ This page collects my algorithm contest solutions and notes.
   {% endunless %}
   <article class="topic-card">
     <div class="topic-card__media">
-      <img src="{{ '/images/Gemini_Generated_Image_c20rjcc20rjcc20r.png' | relative_url }}" alt="AtCoder Beginner Contest 439 cover" style="width: 100%; height: 220px; object-fit: cover;">
+      <img src="{{ '/images/Gemini_Generated_Image_c20rjcc20rjcc20r.webp' | relative_url }}" alt="AtCoder Beginner Contest 439 cover" loading="lazy" decoding="async" style="width: 100%; height: 220px; object-fit: cover;">
     </div>
     <div class="topic-card__body">
       <h3 class="topic-card__title">

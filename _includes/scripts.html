@@ -3,3 +3,113 @@
 
 {% include analytics.html %}
 {% include fetch_google_scholar_stats.html %}
+
+<script>
+  (function () {
+    var darkThemeColor = "#101418";
+    var lightThemeColor = "#ffffff";
+
+    function setTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+
+      var toggle = document.querySelector(".theme-toggle");
+      if (toggle) {
+        toggle.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+      }
+
+      var themeColor = document.querySelector("meta[name='theme-color']");
+      if (themeColor) {
+        themeColor.setAttribute("content", theme === "dark" ? darkThemeColor : lightThemeColor);
+      }
+    }
+
+    function initThemeToggle() {
+      var toggle = document.querySelector(".theme-toggle");
+      if (!toggle) {
+        return;
+      }
+
+      var media = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+
+      toggle.addEventListener("click", function () {
+        var currentTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        var nextTheme = currentTheme === "dark" ? "light" : "dark";
+        setTheme(nextTheme);
+
+        try {
+          window.localStorage.setItem("theme", nextTheme);
+        } catch (error) {}
+      });
+
+      if (media) {
+        var handleSystemThemeChange = function (event) {
+          var storedTheme = null;
+          try {
+            storedTheme = window.localStorage.getItem("theme");
+          } catch (error) {}
+
+          if (!storedTheme) {
+            setTheme(event.matches ? "dark" : "light");
+          }
+        };
+
+        if (media.addEventListener) {
+          media.addEventListener("change", handleSystemThemeChange);
+        } else if (media.addListener) {
+          media.addListener(handleSystemThemeChange);
+        }
+      }
+
+      setTheme(document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light");
+    }
+
+    function initReadingTools() {
+      var tools = document.querySelector(".reading-tools");
+      var button = tools ? tools.querySelector(".back-to-top") : null;
+      var progressBar = tools ? tools.querySelector(".reading-progress__bar") : null;
+      var content = document.getElementById("main-content");
+
+      if (!tools || !button || !progressBar || !content) {
+        return;
+      }
+
+      function hasEnoughContent() {
+        return content.offsetHeight > 900 && document.documentElement.scrollHeight > window.innerHeight + 200;
+      }
+
+      function updateReadingTools() {
+        if (!hasEnoughContent()) {
+          tools.hidden = true;
+          button.classList.remove("is-visible");
+          progressBar.style.transform = "scaleX(0)";
+          return;
+        }
+
+        tools.hidden = false;
+        var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        var progress = maxScroll > 0 ? window.scrollY / maxScroll : 0;
+        progress = Math.max(0, Math.min(1, progress));
+        progressBar.style.transform = "scaleX(" + progress + ")";
+        button.classList.toggle("is-visible", window.scrollY > 320);
+      }
+
+      button.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      window.addEventListener("scroll", updateReadingTools, { passive: true });
+      window.addEventListener("resize", updateReadingTools);
+      updateReadingTools();
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", function () {
+        initThemeToggle();
+        initReadingTools();
+      });
+    } else {
+      initThemeToggle();
+      initReadingTools();
+    }
+  })();
+</script>

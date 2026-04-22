@@ -8,11 +8,13 @@
 # Site Settings (update these for your profile)
 title                    : "Shumao Wang (王树茂)"
 description              : "享受知识本身"
+lang                     : "en"
 repository               : "WangShumao/wangshumao.github.io" # GitHub repo in the form USER/REPO
 google_scholar_stats_use_cdn : false # use jsdelivr for google scholar stats
 
 # google analytics
 google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
+mapmyvisitors_src       : "//mapmyvisitors.com/map.js?d=LLIeXTplQodqrqrDgqSacH7e6nR2un3eT4_5v3glDBY&cl=ffffff&w=a"
 
 # SEO Related
 google_site_verification :  # get google_site_verification from https://search.google.com/search-console/about

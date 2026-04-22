@@ -3,6 +3,9 @@ permalink: /deep-dive/dl-ch1/
 title: "Chapter 1: 深度学习的历史趋势"
 excerpt: ""
 author_profile: false
+description: "《Deep Learning》第一章阅读笔记，包含背景、XOR 多项式构造和三维可视化。"
+schema_type: "Article"
+lang: "zh-CN"
 ---
 
 # Chapter 1: 深度学习的历史趋势

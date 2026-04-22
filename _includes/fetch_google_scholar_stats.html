@@ -5,15 +5,31 @@
         {% else %}
         var gsDataBaseUrl = 'https://raw.githubusercontent.com/{{ site.repository }}/'
         {% endif %}
-        $.getJSON(gsDataBaseUrl + "google-scholar-stats/gs_data.json", function (data) {
-            var totalCitation = data['citedby']
-            document.getElementById('total_cit').innerHTML = totalCitation;
-            var citationEles = document.getElementsByClassName('show_paper_citations')
-            Array.prototype.forEach.call(citationEles, element => {
-                var paperId = element.getAttribute('data')
-                var numCitations = data['publications'][paperId]['num_citations']
-                element.innerHTML = '| Citations: ' + numCitations;
+        $.getJSON(gsDataBaseUrl + "google-scholar-stats/gs_data.json")
+            .done(function (data) {
+                var totalCitationEle = document.getElementById('total_cit');
+                var totalCitation = data && data['citedby'];
+                if (totalCitationEle && typeof totalCitation !== 'undefined') {
+                    totalCitationEle.innerHTML = totalCitation;
+                }
+
+                var citationEles = document.getElementsByClassName('show_paper_citations');
+                Array.prototype.forEach.call(citationEles, function (element) {
+                    var paperId = element.getAttribute('data');
+                    var publication = data && data['publications'] ? data['publications'][paperId] : null;
+                    var numCitations = publication ? publication['num_citations'] : null;
+                    if (typeof numCitations !== 'undefined' && numCitations !== null) {
+                        element.innerHTML = '| Citations: ' + numCitations;
+                    } else {
+                        element.innerHTML = '';
+                    }
+                });
+            })
+            .fail(function () {
+                var citationEles = document.getElementsByClassName('show_paper_citations');
+                Array.prototype.forEach.call(citationEles, function (element) {
+                    element.innerHTML = '';
+                });
             });
-        });
     })
 </script>

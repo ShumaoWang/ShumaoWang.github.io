@@ -3,6 +3,8 @@ permalink: /deep-dive/dl-reading-notes/
 title: "Deep Learning Reading Notes"
 excerpt: ""
 author_profile: false
+description: "Reading notes, chapter summaries, and experiments from the book Deep Learning."
+schema_type: "CollectionPage"
 ---
 
 # Deep Learning Reading Notes

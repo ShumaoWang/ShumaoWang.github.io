@@ -4,6 +4,22 @@
 <link rel="manifest" href="{{ '/images/site.webmanifest' | relative_url }}">
 <link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}">
 
+<script>
+  (function () {
+    var storedTheme = null;
+    try {
+      storedTheme = window.localStorage.getItem("theme");
+    } catch (error) {}
+
+    var preferredTheme = storedTheme;
+    if (!preferredTheme && window.matchMedia) {
+      preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+
+    document.documentElement.setAttribute("data-theme", preferredTheme || "light");
+  })();
+</script>
+
 <meta name="msapplication-TileColor" content="#000000">
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="{{ '/assets/css/academicons.css' | relative_url }}">
@@ -11,52 +27,29 @@
 <meta name="robots" content="noindex, nofollow">
 {% endif %}
 
-<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "none" } } }); </script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [["$", "$"], ["\\(", "\\)"]],
+      displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+      processEscapes: true,
+      tags: "none"
+    },
+    options: {
+      skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+    },
+    chtml: {
+      matchFontHeight: false
+    },
+    startup: {
+      pageReady: function () {
+        return MathJax.startup.defaultPageReady().then(function () {
+          window.dispatchEvent(new Event("mathjax:rendered"));
+        });
+      }
     }
-  });
+  };
 </script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    "HTML-CSS": { linebreaks: { automatic: false } },
-    "CommonHTML": { linebreaks: { automatic: false } },
-    "SVG": { linebreaks: { automatic: false } }
-  });
-</script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Register.StartupHook("End", function () {
-    function wrapDisplays() {
-      var displays = document.querySelectorAll(".MathJax_Display, .MJXc-display");
-      displays.forEach(function (display) {
-        if (display.parentElement && display.parentElement.classList.contains("math-scroll")) {
-          return;
-        }
-        var wrapper = document.createElement("div");
-        wrapper.className = "math-scroll";
-        display.parentNode.insertBefore(wrapper, display);
-        wrapper.appendChild(display);
-      });
-    }
-
-    function markOverflow() {
-      var wrappers = document.querySelectorAll(".math-scroll");
-      wrappers.forEach(function (wrapper) {
-        wrapper.classList.remove("math-scroll--overflow");
-        if (wrapper.scrollWidth > wrapper.clientWidth + 1) {
-          wrapper.classList.add("math-scroll--overflow");
-        }
-      });
-    }
-
-    wrapDisplays();
-    markOverflow();
-    window.addEventListener("resize", markOverflow);
-  });
-</script>
-<script src="{{ '/assets/vendor/mathjax/MathJax.js' | relative_url }}?config=TeX-MML-AM_CHTML" async></script>
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 
 <!-- end custom head snippets -->

@@ -3,13 +3,18 @@ layout: compress
 ---
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}" class="no-js">
   <head>
     {% include head.html %}
     {% include head/custom.html %}
   </head>
 
   <body>
+    <nav aria-label="Skip links">
+      <ul class="skip-link">
+        <li><a class="screen-reader-shortcut" href="#main-content">Skip to content</a></li>
+      </ul>
+    </nav>
 
     {% include browser-upgrade.html %}
     {% include masthead.html %}
@@ -17,16 +22,28 @@ layout: compress
     <div id="main" role="main">
       {% include sidebar.html %}
     
-      <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+      <article class="page" itemscope itemtype="https://schema.org/{{ page.schema_type | default: 'WebPage' }}">
         {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
         <div class="page__inner-wrap">
-          <section class="page__content" itemprop="text">
+          <section id="main-content" class="page__content" itemprop="text">
             {{ content }}
           </section>
         </div>
       </article>
     </div>
 
+    {% unless page.url == '/' %}
+    <div class="reading-tools" hidden>
+      <div class="reading-progress" aria-hidden="true">
+        <span class="reading-progress__bar"></span>
+      </div>
+      <button type="button" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+      </button>
+    </div>
+    {% endunless %}
+
+    {% include footer.html %}
     {% include scripts.html %}
 
   </body>

@@ -5,6 +5,9 @@ excerpt: ""
 author_profile: false
 hide_from_public: true
 sitemap: false
+description: "Selected written-exam problems, notes, and reflections from the UESTC SCSE postgraduate re-examination."
+schema_type: "Article"
+lang: "zh-CN"
 ---
 
 {% if page.hide_from_public and jekyll.environment == "production" %}

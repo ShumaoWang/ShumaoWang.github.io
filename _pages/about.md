@@ -1,8 +1,10 @@
 ---
 permalink: /
-title: ""
+title: "Shumao Wang"
 excerpt: ""
+description: "Personal website of Shumao Wang with background information, learning notes, algorithms, and machine learning updates."
 author_profile: true
+schema_type: "ProfilePage"
 redirect_from: 
   - /about/
   - /about.html
@@ -35,7 +37,7 @@ Recent articles and refreshed notes are listed here for quick access.
   <article class="topic-card update-card">
     {% if item.image %}
     <div class="topic-card__media update-card__media">
-      <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
+      <img src="{{ item.image | relative_url }}" alt="{{ item.title }}" loading="lazy" decoding="async">
     </div>
     {% endif %}
     <div class="topic-card__body">
