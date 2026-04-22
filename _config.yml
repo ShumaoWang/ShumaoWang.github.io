@@ -14,7 +14,7 @@ google_scholar_stats_use_cdn : false # use jsdelivr for google scholar stats
 
 # google analytics
 google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
-mapmyvisitors_src       : "//mapmyvisitors.com/map.js?d=LLIeXTplQodqrqrDgqSacH7e6nR2un3eT4_5v3glDBY&cl=ffffff&w=a"
+mapmyvisitors_src       : "https://mapmyvisitors.com/map.js?cl=ffffff&w=a&t=tt&d=LLIeXTplQodqrqrDgqSacH7e6nR2un3eT4_5v3glDBY"
 
 # SEO Related
 google_site_verification :  # get google_site_verification from https://search.google.com/search-console/about
