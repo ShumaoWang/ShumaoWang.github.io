@@ -11,6 +11,10 @@ schema_type: "CollectionPage"
 
 This page collects my learning notes and reflections on machine learning. I will keep it updated as I study and build projects.
 
+My research interest lies in self-supervised learning in computer vision. 
+
+During my undergraduate studies, I focused on enhancing the model's ability to represent fine-grained features in medical images, thereby improving its performance on medical image segmentation tasks.
+
 <div class="page__toc" markdown="1">
 <p class="page__toc-title">On this page</p>
 
@@ -44,6 +48,17 @@ This page collects my learning notes and reflections on machine learning. I will
         <a href="{{ '/deep-dive/ml-specialization/' | relative_url }}" target="_self">Machine Learning Specialization by Andrew Ng - Study Notes</a>
       </h3>
       <p class="topic-card__meta">Study notes and exercises from the Machine Learning Specialization.</p>
+    </div>
+  </article>
+  <article class="topic-card">
+    <div class="topic-card__media">
+      <img src="{{ '/images/Gemini_Generated_Image_8dju1j8dju1j8dju.webp' | relative_url }}" alt="Self-supervised learning research cover" loading="lazy" decoding="async" style="width: 100%; height: 220px; object-fit: cover;">
+    </div>
+    <div class="topic-card__body">
+      <h3 class="topic-card__title">
+        <a href="{{ '/deep-dive/self-supervised-learning/' | relative_url }}" target="_self">Self-Supervised Learning</a>
+      </h3>
+      <p class="topic-card__meta">Research questions, paper reading notes, and reflections on self-supervised representation learning.</p>
     </div>
   </article>
 </div>
