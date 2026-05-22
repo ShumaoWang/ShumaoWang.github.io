@@ -1,4 +1,10 @@
 # Keep most recently updated items first.
+- title: "Some thoughts on SSL"
+  date: "2026-05-22"
+  url: "/deep-dive/self-supervised-learning/some-thoughts-on-ssl/"
+  image: "/images/Gemini_Generated_Image_8dju1j8dju1j8dju.webp"
+  summary: "Personal reflections on RGB observations, ViT, attention, and self-supervised learning."
+
 - title: "Some Interesting Problems from the Written Exam for UESTC SCSE's Postgraduate Re-examination"
   date: "2026-03-22"
   url: "/algorithms/uestc-scse-written-exam-problems/"
