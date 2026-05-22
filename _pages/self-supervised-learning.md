@@ -50,7 +50,7 @@ This page collects my research questions, paper reading notes, and reflections o
       <p class="topic-card__meta">DINO series reading notes and questions.</p>
 
       <h4>
-        <a href="{{ '/deep-dive/self-supervised-learning/paper-reading-notes/#some-thoughts-on-ssl' | relative_url }}" target="_self">Some thoughts on SSL</a>
+        <a href="{{ '/deep-dive/self-supervised-learning/some-thoughts-on-ssl/' | relative_url }}" target="_self">Some thoughts on SSL</a>
       </h4>
       <p class="topic-card__meta">Personal reflections on SSL objectives, labels, and representation quality.</p>
     </div>
